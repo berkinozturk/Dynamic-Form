@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,12 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         public static CustomerControl[] list;
+        private CustomerControl selectedCustomerControl;
+        private CustomerControl CustomerControl_MouseClick;
+        
+        
+
+
 
         public Form1()
         {
@@ -22,18 +29,25 @@ namespace WindowsFormsApp1
 
         public List<string> name = new List<string>();
         public List<string> address = new List<string>();
+        
+
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadData();
+            
+            
 
         }
+       
+
+
         private void LoadData()
         {
             string connectionString = "Data Source=DESKTOP-CROD6B4;Initial Catalog=deneme;Integrated Security=True;";
 
-            string query = "SELECT * FROM deneme3";
+            string query = "SELECT * FROM deneme4";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -63,15 +77,33 @@ namespace WindowsFormsApp1
                             flowLayoutPanel1.Controls.Add(list[i]);
                         }
                     }
-
-
-
                 }
 
                 reader.Close();
                 connection.Close();
             }
+
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (CustomerControl c in CustomerControl.SelectedItems)
+            {
+                flowLayoutPanel1.Controls.Remove(c);
+            }
+            CustomerControl.SelectedItems.Clear();
+        }
+
+
+
+
+        /* private void label1_Click(object sender, EventArgs e)
+         {
+             // Seçilen müşterinin adını ve adresini MessageBox'ta göster
+             string message = $"Selected Customer: {selectedCustomerControl.Name}, {selectedCustomerControl.Address}";
+             MessageBox.Show(message);
+
+         } */
     }
 
 }

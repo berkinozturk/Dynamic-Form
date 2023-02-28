@@ -41,6 +41,7 @@
             this.nameLabel.Size = new System.Drawing.Size(59, 13);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "nameLabel";
+            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // addressLabel
             // 
@@ -70,6 +71,7 @@
             this.Name = "CustomerControl";
             this.Size = new System.Drawing.Size(508, 42);
             this.Load += new System.EventHandler(this.CustomerControl_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CustomerControl_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
