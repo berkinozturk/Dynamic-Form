@@ -25,23 +25,21 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         public List<string> name = new List<string>();
         public List<string> address = new List<string>();
         
 
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadData();
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.VerticalScroll.Visible = true;
             
             
-
         }
-       
-
 
         private void LoadData()
         {
@@ -59,26 +57,20 @@ namespace WindowsFormsApp1
 
                 while (reader.Read())
                 {
-                    name.Add(reader.GetString(0));
-                    address.Add(reader.GetString(1));
+                    string currentName = reader.GetString(0);
+                    string currentAddress = reader.GetString(1);
 
-                    list = new CustomerControl[name.Count];
-                    for (int i = 0; i < name.Count; i++)
+                    if (!name.Contains(currentName) && !address.Contains(currentAddress))
                     {
-                        list[i] = new CustomerControl(this);
-                        list[i].Name = name[i];
-                        list[i].Address = address[i];
-                        if (flowLayoutPanel1.Controls.Count < 0)
-                        {
-                            flowLayoutPanel1.Controls.Clear();
-                        }
-                        else
-                        {
-                            flowLayoutPanel1.Controls.Add(list[i]);
-                        }
+                        name.Add(currentName);
+                        address.Add(currentAddress);
+
+                        CustomerControl newCustomer = new CustomerControl(this);
+                        newCustomer.Name = currentName;
+                        newCustomer.Address = currentAddress;
+                        flowLayoutPanel1.Controls.Add(newCustomer);
                     }
                 }
-
                 reader.Close();
                 connection.Close();
             }
@@ -94,16 +86,53 @@ namespace WindowsFormsApp1
             CustomerControl.SelectedItems.Clear();
         }
 
+        
 
+        private void button2_Click(object sender, EventArgs e)
+        {
 
+            var customerControl = (CustomerControl)sender;
+            bool isSelected = !customerControl.IsSelected;
 
-        /* private void label1_Click(object sender, EventArgs e)
-         {
-             // Seçilen müşterinin adını ve adresini MessageBox'ta göster
-             string message = $"Selected Customer: {selectedCustomerControl.Name}, {selectedCustomerControl.Address}";
-             MessageBox.Show(message);
+            // Tüm müşteri kontrol seçimlerini kaldır ve seçileni güncelle
+            foreach (var control in flowLayoutPanel1.Controls.OfType<CustomerControl>())
+            {
+                control.IsSelected = false;
+            }
 
-         } */
+            customerControl.IsSelected = isSelected;
+
+            // Seçili müşteri kontrol sayısını al
+            int selectedCount = flowLayoutPanel1.Controls.OfType<CustomerControl>().Count(x => x.IsSelected);
+
+            // Sadece 1 tane müşteri seçilmiş ise
+            if (selectedCount == 1)
+            {
+                button2.Enabled = true;
+                button2.FlatStyle = FlatStyle.Standard;
+
+                // Seçilen müşteriyi bul ve ismini MessageBox'ta göster
+                selectedCustomerControl = flowLayoutPanel1.Controls.OfType<CustomerControl>().FirstOrDefault(x => x.IsSelected);
+                MessageBox.Show(selectedCustomerControl.Name);
+            }
+            else 
+            {
+                button2.Enabled=false;
+                button2.FlatStyle = FlatStyle.Flat;
+                
+            }
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void button2_EnabledChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 
 }

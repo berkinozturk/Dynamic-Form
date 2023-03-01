@@ -26,7 +26,8 @@ namespace WindowsFormsApp1
         private string name;
         private string address;
         private bool selected = false;
-        private List<string> data = new List<string>();
+        
+       
         public static List<CustomerControl> SelectedItems { get; set; } = new List<CustomerControl>(); // bu liste selected item'ları tutacak
         
 
@@ -75,7 +76,18 @@ namespace WindowsFormsApp1
             }
            
         }
+        public bool IsSelected
+        {
+            get { return this.BackColor == Color.Aqua; }
+            set { this.BackColor = value ? Color.Aqua : SystemColors.Control; }
+        }
 
-        
+
+
+
+
+
+
+
     }
 }
