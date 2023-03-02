@@ -10,22 +10,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
         public static CustomerControl[] list;
-        private CustomerControl selectedCustomerControl;
-        private CustomerControl CustomerControl_MouseClick;
         
         
-
-
 
         public Form1()
         {
             InitializeComponent();
-            
+           
         }
 
         public List<string> name = new List<string>();
@@ -88,50 +85,25 @@ namespace WindowsFormsApp1
 
         
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            var customerControl = (CustomerControl)sender;
-            bool isSelected = !customerControl.IsSelected;
-
-            // Tüm müşteri kontrol seçimlerini kaldır ve seçileni güncelle
-            foreach (var control in flowLayoutPanel1.Controls.OfType<CustomerControl>())
-            {
-                control.IsSelected = false;
-            }
-
-            customerControl.IsSelected = isSelected;
-
-            // Seçili müşteri kontrol sayısını al
-            int selectedCount = flowLayoutPanel1.Controls.OfType<CustomerControl>().Count(x => x.IsSelected);
-
-            // Sadece 1 tane müşteri seçilmiş ise
-            if (selectedCount == 1)
-            {
-                button2.Enabled = true;
-                button2.FlatStyle = FlatStyle.Standard;
-
-                // Seçilen müşteriyi bul ve ismini MessageBox'ta göster
-                selectedCustomerControl = flowLayoutPanel1.Controls.OfType<CustomerControl>().FirstOrDefault(x => x.IsSelected);
-                MessageBox.Show(selectedCustomerControl.Name);
-            }
-            else 
-            {
-                button2.Enabled=false;
-                button2.FlatStyle = FlatStyle.Flat;
-                
-            }
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
             
+            foreach (CustomerControl c in CustomerControl.SelectedItems)
+            {
+                if (CustomerControl.SelectedItems.Count == 1)  {
+                    MessageBox.Show(c.Name);
+                }
+                
+                
+            }
         }
-
-        private void button2_EnabledChanged(object sender, EventArgs e)
+       public void disableButton()
         {
-           
+            button2.Enabled = false;
+        }
+        public void enableButton()
+        {
+            button2.Enabled = true;
         }
     }
 

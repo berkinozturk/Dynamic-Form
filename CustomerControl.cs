@@ -15,27 +15,30 @@ namespace WindowsFormsApp1
     public partial class CustomerControl : UserControl
     {
         Form form1;
-        
+        Form1 form2 = new Form1();
+
+
 
         public CustomerControl(Form f1)
         {
             InitializeComponent();
             form1 = f1;
-           
+            
+
         }
         private string name;
         private string address;
         private bool selected = false;
-        
-       
+
+
         public static List<CustomerControl> SelectedItems { get; set; } = new List<CustomerControl>(); // bu liste selected item'ları tutacak
-        
+
 
 
         public string Name { get { return name; } set { name = value; nameLabel.Text = name; } }
         public string Address { get { return address; } set { address = value; addressLabel.Text = address; } }
         public bool Selected { get { return selected; } set { selected = value; } }
-        
+
 
 
 
@@ -74,20 +77,27 @@ namespace WindowsFormsApp1
                 SelectedItems.Add(this);
                 this.BackColor = Color.Aqua;
             }
-           
+
+            // Get form2 instance
+            Form1 form2 = (Form1)Application.OpenForms["Form1"];
+
+            // Check number of selected items
+            if (SelectedItems.Count == 1)
+            {
+                form2.enableButton();
+            }
+            else
+            {
+                form2.disableButton();
+            }
+
+            // Check if there are no selected items
+            if (SelectedItems.Count == 0)
+            {
+                form2.disableButton();
+            }
+
+
         }
-        public bool IsSelected
-        {
-            get { return this.BackColor == Color.Aqua; }
-            set { this.BackColor = value ? Color.Aqua : SystemColors.Control; }
-        }
-
-
-
-
-
-
-
-
     }
 }
