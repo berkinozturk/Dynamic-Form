@@ -15,42 +15,30 @@ namespace WindowsFormsApp1
     public partial class CustomerControl : UserControl
     {
         Form form1;
-        Form1 form2 = new Form1();
+        Form1 form2 = new Form1(); //form2 object from Form1 class
 
 
 
         public CustomerControl(Form f1)
         {
-            InitializeComponent();
+            InitializeComponent(); 
             form1 = f1;
             
 
         }
-        private string name;
-        private string address;
-        private bool selected = false;
-
-
-        public static List<CustomerControl> SelectedItems { get; set; } = new List<CustomerControl>(); // bu liste selected item'ları tutacak
+        private string name; //name variable
+        private string address; // address variable
 
 
 
-        public string Name { get { return name; } set { name = value; nameLabel.Text = name; } }
-        public string Address { get { return address; } set { address = value; addressLabel.Text = address; } }
-        public bool Selected { get { return selected; } set { selected = value; } }
+        public static List<CustomerControl> SelectedItems { get; set; } = new List<CustomerControl>(); // list variable of selected items
 
 
 
+        public string Name { get { return name; } set { name = value; nameLabel.Text = name; } } //name variable getter & setter
+        public string Address { get { return address; } set { address = value; addressLabel.Text = address; } } // address variable getter & setter
 
-        private void CustomerControl_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void nameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void CustomerControl_MouseClick(object sender, MouseEventArgs e)
@@ -66,7 +54,7 @@ namespace WindowsFormsApp1
             } */
 
 
-            // Seçilen öğelerin arkaplan renklerini ayarlama ve kaldırma
+            // Öğe seçiliyse listeden kaldır.
             if (SelectedItems.Contains(this))
             {
                 SelectedItems.Remove(this);
@@ -74,30 +62,24 @@ namespace WindowsFormsApp1
             }
             else
             {
-                SelectedItems.Add(this);
-                this.BackColor = Color.Aqua;
+                SelectedItems.Add(this); //Öğe seçili değilse listeye ekle
+                this.BackColor = Color.Aqua; //Öğenin arkaplanın rengini boya
             }
 
             // Get form2 instance
             Form1 form2 = (Form1)Application.OpenForms["Form1"];
-
+                
             // Check number of selected items
             if (SelectedItems.Count == 1)
             {
-                form2.enableButton();
+                form2.enableButton(); //make button enable 
             }
             else
             {
-                form2.disableButton();
+                form2.disableButton(); //make button disable
             }
-
-            // Check if there are no selected items
-            if (SelectedItems.Count == 0)
-            {
-                form2.disableButton();
-            }
-
 
         }
+        
     }
 }

@@ -31,6 +31,7 @@
             this.nameLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -41,7 +42,6 @@
             this.nameLabel.Size = new System.Drawing.Size(59, 13);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "nameLabel";
-            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // addressLabel
             // 
@@ -58,19 +58,26 @@
             this.panel1.Location = new System.Drawing.Point(25, 38);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(210, 1);
+            this.panel1.Size = new System.Drawing.Size(180, 1);
             this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(109, 29);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 10);
+            this.panel2.TabIndex = 3;
             // 
             // CustomerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.nameLabel);
             this.Name = "CustomerControl";
             this.Size = new System.Drawing.Size(508, 42);
-            this.Load += new System.EventHandler(this.CustomerControl_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CustomerControl_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -82,5 +89,6 @@
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
