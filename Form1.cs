@@ -9,6 +9,8 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+
 
 
 namespace WindowsFormsApp1
@@ -29,6 +31,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             panel1.BackColor = Color.MediumTurquoise;
+
             
 
         }
@@ -41,8 +44,7 @@ namespace WindowsFormsApp1
         private Point dragPanelPoint;
         private Point dragFormPoint;
         public static CustomerControl[] list; //list variable 
-
-
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -52,13 +54,14 @@ namespace WindowsFormsApp1
             this.DoubleBuffered = true;
             this.ResizeRedraw = true;
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            
 
-            this.button1.Image = Image.FromFile("C:\\Users\\berki\\source\\repos\\WindowsFormsApp1\\bin.png").GetThumbnailImage(25, 25, null, IntPtr.Zero);
-
+            // this.button1.Image = Image.FromFile("C:\\Users\\berki\\source\\repos\\WindowsFormsApp1\\bin.png").GetThumbnailImage(25, 25, null, IntPtr.Zero);
 
             
-            // Buton arkaplanının tamamen şeffaf olmasını sağlar
-            button1.BackColor = Color.Transparent;
+                
+
+            
 
         }
 
@@ -122,30 +125,34 @@ namespace WindowsFormsApp1
         }
        public void disableButton()
         {
-            button2.Enabled = false;
+            //button2.Enabled = false;
+            siticoneGradientButton2.Enabled = false;
         }
         public void enableButton()
         {
-            button2.Enabled = true;
+           // button2.Enabled = true;
+            siticoneGradientButton2.Enabled = true;
+
         }
 
-        
+
 
         private void button1_MouseEnter(object sender, EventArgs e) //delete button
         {
-            button1.BackColor = Color.Red;
+            //siticoneButton1.BackColor = Color.Red;
+            
 
         }
 
         private void button1_MouseLeave(object sender, EventArgs e) //Show Name button
         {
-            button1.BackColor = DefaultBackColor;
+            //siticoneButton1.BackColor = DefaultBackColor;
 
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            button2.BackColor = Color.Yellow;
+            siticoneGradientButton2.BackColor = Color.Yellow;
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
@@ -193,7 +200,7 @@ namespace WindowsFormsApp1
             this.Close(); //programı kapatır
         }
 
-       
+
     }
 
 

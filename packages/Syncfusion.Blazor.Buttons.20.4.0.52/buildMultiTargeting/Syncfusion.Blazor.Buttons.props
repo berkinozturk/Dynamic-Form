@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Syncfusion.Blazor.Buttons.props" />
+</Project>

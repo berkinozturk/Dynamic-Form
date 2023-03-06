@@ -1,0 +1,4575 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.Blazor.Buttons</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.Blazor.Buttons.SfButton">
+            <summary> 
+            Button is a graphical user interface that helps to triggers an event on its click action. 
+            It can contain a text, an icon, svg or both. 
+            </summary> 
+            <remarks> 
+            Button content is either by specifying <see cref="P:Syncfusion.Blazor.Buttons.SfButton.Content"/> property or by specifying content within <see cref="T:Syncfusion.Blazor.Buttons.SfButton"/> tag directive. 
+            </remarks> 
+            <example> 
+            In the below code example, a basic button is initialized with <see cref="P:Syncfusion.Blazor.Buttons.SfButton.Content"/> property. 
+            <code><![CDATA[ 
+            <SfButton Content="Click"> 
+            </SfButton> 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.ChildContent">
+            <summary> 
+            Gets or sets a value that indicates the child content for the Button including HTML element. If the child content is not specified, button is rendered using <see cref="P:Syncfusion.Blazor.Buttons.SfButton.Content"/> property. 
+            </summary> 
+            <value> 
+            The template content. The default value is <c>null</c>. 
+            </value> 
+            <remarks> 
+            The child content which is specified within <see cref="T:Syncfusion.Blazor.Buttons.SfButton"/> tag directive is either a string or HTML Element. The string content is also specified using <see cref="P:Syncfusion.Blazor.Buttons.SfButton.Content"/> property. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.Content">
+            <summary> 
+            Gets or sets a value that indicates the content of Button component. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+            <remarks> 
+            Set child content within <see cref="T:Syncfusion.Blazor.Buttons.SfButton"/> tag directive, to render as HTML content. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.CssClass">
+            <summary> 
+            Gets or sets a value that indicates the CSS class string to customize the appearance of button. 
+            </summary> 
+            <value> 
+            Accepts a CSS class string separated by space to customize the appearance of button. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.Disabled">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable the button. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the button component is disabled. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.EnableRtl">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable the right to left direction for button. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the right to left direction is enabled for button. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.IconCss">
+            <summary> 
+            Gets or sets a value that indicates the CSS class string to include an icon or image for the button.  
+            </summary> 
+            <value> 
+            Accepts a CSS class string separated by space to include an icon or image for the button. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.IconPosition">
+            <summary> 
+            Gets or sets a value that indicates how to display icons in the button. 
+            </summary> 
+            <value> 
+            One of the <see cref="P:Syncfusion.Blazor.Buttons.SfButton.IconPosition"/> enumeration. The default value is <see cref="F:Syncfusion.Blazor.Buttons.IconPosition.Left"/> 
+            </value> 
+            <remarks> 
+            If the <c>IconPosition</c> is <c>Left</c>, the icon will be placed left to the content of the button. 
+            If the <c>IconPosition</c> is <c>Right</c>, the icon will be placed right to the content of the button. 
+            If the <c>IconPosition</c> is <c>Top</c>, the icon will be placed above the content of the button. 
+            If the <c>IconPosition</c> is <c>Bottom</c>, the icon will be placed below the content of the button. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.IsPrimary">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable the primary style for button. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the primary style is enabled for button component. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.IsToggle">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable the toggle option for button component. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the toggle option is enabled for button component. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.HtmlAttributes">
+            <exclude/>
+            <summary> 
+            Gets or sets a a value that indicates the collection of additional attributes that will applied to the button container element. 
+            </summary> 
+            <remarks> 
+            Additional attributes can be added by specifying as inline attributes or by specifying <c>@attributes</c> directive. 
+            </remarks> 
+            <example> 
+            In the below code example, button width has been specified as style attribute in <see cref="T:Syncfusion.Blazor.Buttons.SfButton"/> tag directive. 
+            <code><![CDATA[ 
+            <SfButton style="width:200px"> 
+            </SfButton> 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.OnClick">
+            <summary> 
+            Gets or sets an event callback that is raised when the <see cref="T:Syncfusion.Blazor.Buttons.SfButton"/> is clicked.  
+            </summary> 
+            <remarks> 
+            The event is raised for UI based click only. 
+            </remarks> 
+            <example> 
+            <code><![CDATA[ 
+            <SfButton OnClick="@Clicked"> 
+            </SfButton> 
+            @code { 
+                private void Clicked(MouseEventArgs args) { 
+                    // Write your code here. 
+                } 
+            } 
+            ]]></code> 
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfButton.Created">
+            <summary> 
+            Gets or sets an event callback that is raised when the <see cref="T:Syncfusion.Blazor.Buttons.SfButton"/> rendering is completed.  
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfButton.FocusIn">
+            <summary>
+            focuses the button to perform click action. 
+            </summary>
+            <exclude/>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfButton.FocusAsync">
+            <summary> 
+            focuses the button to perform click action. 
+            </summary> 
+            <returns><see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.IconPosition">
+            <summary>
+            Defines the icon position of Button.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconPosition.Left">
+            <summary>
+            To position icon left to content.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconPosition.Right">
+            <summary>
+            To position icon right to content.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconPosition.Top">
+            <summary>
+            To position icon above the content.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconPosition.Bottom">
+            <summary>
+            To position icon below the content.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.Internal.SpeedDialItemView">
+            <summary>
+            Provides the view for  rendering of speeddial items.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.Internal.SpeedDialItemView.Parent">
+            <summary>
+            Gets or sets the SpeedDial (Parent) instance.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.Internal.SpeedDialItemView.Item">
+            <summary>
+            Gets or sets the SpeedDial item value.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.Internal.SpeedDialItemView.Index">
+            <summary>
+            Gets or sets the SpeedDial item index.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialItemView.OnParametersSetAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialItemView.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialItemView.liClick">
+            <summary>
+            Handles the click event of the SpeedDial Item.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.UpdatePosition">
+            <summary>
+            Updates the class and attributes ofr positioning of the SpeedDial popup.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.getActualRadialSettings">
+            <summary>
+            Gets the final adjusted values for radial settings to be used while rendering the SpeedDial items in Radial mode..
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.checkAngleRange(System.Int32,System.Int32,Syncfusion.Blazor.Buttons.SpeedDialRadialSettings,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Validates the angle range (start + end) in radial mode.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.checkAngle(System.Int32,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Validates the angle in radial mode.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.focusFirstElement">
+            <summary>
+            Checks and moves the focus to first element which is not disabled.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.focusLastElement">
+            <summary>
+            Checks and moves the focus to last element which is not disabled.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.focusLinearElement(System.Boolean)">
+            <summary>
+            Checks for the element to focus on Linear mode.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.focusLeftRightElement(System.Boolean)">
+            <summary>
+            Checks for the element to focus during Left and Right key press on Radial mode.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.focusUpDownElement(System.Boolean)">
+            <summary>
+            Checks for the element to focus during Up and Down key press on Radial mode.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.focusPrevElement">
+            <summary>
+            Checks and moves the focus to previous element which is not disabled.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.focusNextElement">
+            <summary>
+            Checks and moves the focus to next element which is not disabled.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.overlayClick">
+            <summary>
+            Handles the click action on overlay element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.keyDownHandler(Microsoft.AspNetCore.Components.Web.KeyboardEventArgs)">
+            <summary>
+            Handles the key press action on the SpeedDial Popup.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.UpdateClientParameters(System.Boolean)">
+            <summary>
+            Gets the properties from interop and update the corresponding variables in the server side
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.Internal.SpeedDialPopup.keyActionHandler(Microsoft.AspNetCore.Components.Web.KeyboardEventArgs)">
+            <summary>
+            Handles the navigation of items for the key action details from SpeedDial Button (FAB).
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SfCheckBox`1">
+            <summary> 
+            CheckBox is a graphical user interface element that allows you to select one or more options from the choices. 
+            It has checked, unchecked, and indeterminate states. 
+            </summary> 
+            <example> 
+            In the below code example, a basic checkbox is initialized with <c>Checked</c> property. 
+            <code><![CDATA[ 
+            <SfCheckBox Checked="true"> 
+            </SfCheckBox> 
+            ]]></code> 
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.Label">
+            <summary> 
+            Gets or sets a value that indicates the label of checkbox. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.LabelPosition">
+            <summary> 
+            Gets or sets a value that indicates how to display label in the checkbox. 
+            </summary> 
+            <value> 
+            One of the <see cref="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.LabelPosition"/> enumeration. The default value is <see cref="F:Syncfusion.Blazor.Buttons.LabelPosition.Before"/> 
+            </value> 
+            <remarks> 
+            If the <c>LabelPosition</c> is <c>Before</c>, the label will be placed to the left side of the CheckBox. 
+            If the <c>LabelPosition</c> is <c>After</c>, the icon will be placed to the right side of the CheckBox. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.Indeterminate">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable indeterminate state in the checkbox. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the checkbox is in indeterminate state. The default value is <c>false</c>. 
+            </value> 
+            <remarks> 
+            The <see cref="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.Indeterminate"/> property overrides this <c>Checked</c> property in initial rendering of Checkbox. 
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.IndeterminateChanged">
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.EnableTriState">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable the tristate in the checkbox. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the checkbox is rendered with tristate. The default value is <c>false</c>. 
+            </value> 
+            <remarks> 
+            The <see cref="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.EnableTriState"/> property is working based on <c>Checked</c> and <see cref="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.Indeterminate"/> property. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfCheckBox`1.ValueChange">
+            <summary> 
+            Gets or sets an event callback that is raised when the checkbox state is changed.  
+            </summary> 
+            <remarks> 
+            The event is raised for UI based click only. 
+            </remarks> 
+            <example> 
+            <code><![CDATA[ 
+            <SfCheckBox ValueChange="@Changed"> 
+            </SfCheckBox> 
+            @code { 
+                private void Changed(ChangeEventArgs<TChecked> args) { 
+                    // Write your code here. 
+                } 
+            } 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.ChipEvents">
+            <summary>
+            Configure handlers to handle the events with the Chip component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEvents.BaseParent">
+            <summary>
+            Indicates the SfChip component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEvents.OnBeforeClick">
+            <summary>
+            This click event will get triggered once the chip is before click.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEvents.OnClick">
+            <summary>
+            This click event will get triggered once the chip is clicked.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEvents.Created">
+            <summary>
+            This created event will get triggered once the component rendering is completed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEvents.Destroyed">
+            <summary>
+            This created event will get triggered once the component successfuly disposed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEvents.OnDelete">
+            <summary>
+            This delete event will get triggered before removing the chip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEvents.Deleted">
+            <summary>
+            Gets or sets an event callback that is raised when the chip item is deleted.
+            </summary>
+            <remarks>
+            You can get the deleted chip details.
+            </remarks>
+            <example>
+            In the below code example, the deleted chip value can be obtained from the <c>Deleted</c> event.
+            <code><![CDATA[
+            <SfChip Selection="SelectionType.Multiple" EnableDelete=true>
+                <ChipEvents Deleted="@onDeleted"></ChipEvents>
+                <ChipItems>
+                    <ChipItem Text = "Small"></ChipItem>
+                    <ChipItem Text = "Medium"></ChipItem>
+                    <ChipItem Text = "Large"></ChipItem>
+                    <ChipItem Text = "Extra Large"></ChipItem>
+                </ChipItems>
+            </SfChip>
+            @code {
+                private void onDeleted(ChipDeletedEventArgs args) {
+                    string deletedValue = args.Value;
+                }
+            }
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEvents.SelectionChanged">
+            <summary>
+            Gets or sets an event callback that is raised when the selected chips are changed.
+            </summary>
+            <remarks>
+            You can get the updated SelectedChips value.
+            </remarks>
+            <example>
+            In the below code example, the SelectedChips value can be obtained from the <see cref="!:SfChip.SelectionChanged"/> event.
+            <code><![CDATA[
+            <SfChip Selection="SelectionType.Multiple">
+                <ChipItems>
+                    <ChipItem Text = "Small"></ChipItem>
+                    <ChipItem Text = "Medium"></ChipItem>
+                    <ChipItem Text = "Large"></ChipItem>
+                    <ChipItem Text = "Extra Large"></ChipItem>
+                </ChipItems>
+             <ChipEvents SelectionChanged="SelectedChipsChanged" ></ChipEvents>
+            </SfChip>
+            @code {
+                private void SelectedChipsChanged(SelectionChangedEventArgs args) {
+                    var selectedChipItems = args.AddedItems;
+                }
+            }
+            ]]></code>
+            </example>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.ChipEvents.OnInitializedAsync">
+            <summary>
+            Method invoked when the component is ready to start.
+            </summary>
+            <returns>="Task".</returns>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.ChipItem">
+            <summary>
+            A Chip is a small block of essential information that contains the text, image, or both and mostly used in contacts, mails, or filter tags.
+            </summary>
+            <summary>
+            Partial Class ChipItem.
+            </summary>
+            <summary>
+            Partial Class ChipItem.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.Parent">
+            <summary>
+            Indicates the ChipItems component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.BaseParent">
+            <summary>
+            Indicates the SfChip component.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.ChipItem.OnInitializedAsync">
+            <summary>
+            Method invoked when the component is ready to start.
+            </summary>
+            <returns>="Task".</returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.ChipItem.OnParametersSetAsync">
+            <summary>
+            Method invoked when any changes in component state occurs.
+            </summary>
+            <returns>="Task".</returns>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.ChildContent">
+            <summary>
+            Specifies the ChildContent.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.CssClass">
+            <summary>
+            Specifies the custom classes to be added to the chip element used to customize the Chip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.Enabled">
+            <summary>
+            Specifies a value that indicates whether the chip component is enabled or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.LeadingIconCss">
+            <summary>
+            Specifies the leading icon CSS class for the chip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.LeadingIconUrl">
+            <summary>
+            Specifies the leading icon url for the chip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.LeadingText">
+            <summary>
+            Specifies the customized text value for the avatar in the chip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.Text">
+            <summary>
+            Specifies the text content for the chip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.TrailingIconCss">
+            <summary>
+            Specifies the trailing icon CSS class for the chip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.TrailingIconUrl">
+            <summary>
+            Specifies the leading icon url for the chip.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.Value">
+            <summary>
+            This value property helps to store the chip component values.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItem.HtmlAttributes">
+            <summary>
+            You can add the additional html attributes such as title to the each chip element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.ChipItems">
+            <summary>
+            Configures the collection of chipitem.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItems.BaseParent">
+            <summary>
+            Indicates the SfChip component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItems.ChildContent">
+            <summary>
+            Indicates the ChildContent.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipItems.Chips">
+            <summary>
+            Indicates the Chips List.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.ChipItems.UpdateChildProperty(Syncfusion.Blazor.Buttons.ChipItem)">
+            <summary>
+            Updates the Chips property and returns the count.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.ChipItems.OnInitializedAsync">
+            <summary>
+            Method invoked when the component is ready to start.
+            </summary>
+            <returns>="Task".</returns>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SelectionType">
+            <summary>
+            Different selection types that are applicable for the Chip component.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SelectionType.Single">
+            <summary>
+            Single selection allows to select a single chip from a set of ChipItem/ChipItems.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SelectionType.Multiple">
+            <summary>
+            Multiple selection allows to select multipe chips from a set of ChipItem/ChipItems.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SelectionType.None">
+            <summary>
+            Selection of chip will be restricted in none type.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.ChipEventArgs">
+            <summary>
+            Interface for Chip Events.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEventArgs.Cancel">
+            <summary>
+            It denotes whether the item can be deleted or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEventArgs.Element">
+            <summary>
+            It denotes the deleted Item element.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEventArgs.Index">
+            <summary>
+            It denotes the deleted item index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEventArgs.Selected">
+            <summary>
+            It denotes whether the clicked item is selected or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEventArgs.Text">
+            <summary>
+            It denotes the deleted item text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipEventArgs.Value">
+            <summary>
+            It denotes the deleted item value.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.ChipDeletedEventArgs">
+            <summary>
+            Provides information about the <see cref="P:Syncfusion.Blazor.Buttons.ChipEvents.Deleted"/> event callback.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipDeletedEventArgs.Index">
+            <summary>
+            Gets the index of the deleted chip item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipDeletedEventArgs.Text">
+            <summary>
+            Gets the text of the deleted chip item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChipDeletedEventArgs.Value">
+            <summary>
+            Gets the value of the deleted chip item.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SelectionChangedEventArgs">
+            <summary>
+            Provides information about the <see cref="!:SfChip.SelectionChanged"/> event call back.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SelectionChangedEventArgs.AddedItems">
+            <summary>
+            Gets an array that contains the chip item's value that were selected.
+            </summary>
+            <value>
+            An array of strings representing the selected chip items' values.
+            </value>
+            <remarks>
+            This property is read-only and is set by the control internally during the event call back.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SelectionChangedEventArgs.RemovedItems">
+            <summary>
+            Gets an array that contains the chip item's value that were unselected.
+            </summary>
+            <value>
+            An array of strings representing the unselected chip items' values.
+            </value>
+            <remarks>
+            This property is read-only and is set by the control internally during the event call back.
+            </remarks>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SfChip">
+            <summary>
+            The SfChip component displays a list of chip each of which contains a block of essential information that triggers an event on click action.
+            </summary>
+            <summary>
+            Partial Class SfChip.
+            </summary>
+            <summary>
+            Specifies the Partial class SfChip.
+            </summary>
+            <summary>
+            Partial Class SfChip.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.UpdateChips(System.Collections.Generic.List{Syncfusion.Blazor.Buttons.ChipItem})">
+            <summary>
+            Updates the child properties of the component.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.RefeshComponent">
+            <summary>
+            Re-renders the complete chip component.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.UpdateAttributes">
+            <summary>
+            Updates the class and multiselection attributes of the chip root element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.GetItem(System.String)">
+            <summary>
+            Returns a ChipItem based on a value of a chip.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.UpdateRefsCount(System.Int32)">
+            <summary>
+            Updates the chip elements count.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.GetAttributes(System.Int32)">
+            <summary>
+            Updates the text, icons url/class and attributes of each chip if multiple chip rendered.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.UpdateAttributes(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Updates the attributes value.
+            </summary>
+            <param name="htmlAttributes">The htmlAttributes.</param>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.OnDeleteClick(System.Int32,System.Boolean)">
+            <summary>
+            Delete click event handler.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.TriggerDeletedEvent">
+            <summary>
+            Triggering the deleted event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.OnChipMouseDown(System.Int32,System.Boolean)">
+            <summary>
+            Chip element mouse down event handler.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.OnChipClick(System.Int32,System.Boolean)">
+            <summary>
+            Chip element click event handler.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.GetEventArgs(System.Int32)">
+            <summary>
+            Returns the click event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.OnChipFocusOut">
+            <summary>
+            Chip element focus out handler.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.OnChipFocus(System.Int32)">
+            <summary>
+            Chip element focus handler.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.OnKeyDown(System.Int32,Microsoft.AspNetCore.Components.Web.KeyboardEventArgs)">
+            <summary>
+            Chip element key down handler.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.ComponentDispose">
+            <summary>
+            Component dispose handled.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.OnInitializedAsync">
+            <summary>
+            Method gets invoked when the component is ready to start.
+            </summary>
+            <returns>="Task".</returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.OnAfterRenderAsync(System.Boolean)">
+            <summary>
+            Method invoked after each time the component has been rendered.
+            </summary>
+            <param name="firstRender">Set to true for the first time component rendering; otherwise gets false.</param>
+            <returns>="Task".</returns>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.ChildContent">
+            <summary>
+            Specifies the ChildContent.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.CssClass">
+            <summary>
+            Specifies the custom classes to be added to the chip element used to customize the chip component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.Chips">
+            <summary>
+            This chips property helps to render chipitem component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.EnableDelete">
+            <summary>
+            This enableDelete property helps to enable delete functionality.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.EnableRtl">
+            <summary>
+            Enable or disable rendering component in right to left direction.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.Enabled">
+            <summary>
+            This enabled property helps to enable/disable chipitem component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.SelectedChips">
+            <summary>
+            This selectedChips property helps to select chip items.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.SelectedChipsChanged">
+            <summary>
+            Specifies the callback to trigger when the selected chips changes.
+            </summary>
+            <remarks>
+            You can get the updated SelectedChips value.
+            </remarks>
+            <example>
+            In the below code example, the SelectedChips value can be obtained from the <c>SelectedChipsChanged</c> event.
+            <code><![CDATA[
+            <SfChip Selection="SelectionType.Multiple" SelectedChipsChanged="SelectedChipsChanged">
+                <ChipItems>
+                    <ChipItem Text = "Small"></ChipItem>
+                    <ChipItem Text = "Medium"></ChipItem>
+                    <ChipItem Text = "Large"></ChipItem>
+                    <ChipItem Text = "Extra Large"></ChipItem>
+                </ChipItems>
+            </SfChip>
+            @code {
+                private void SelectedChipsChanged(string[] args) {
+                    string[] selectedChipItem = args;
+                }
+            }
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.Selection">
+            <summary>
+            This selection property enables chip selection type.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfChip.HtmlAttributes">
+            <summary>
+            You can add the additional html attributes such as title, native events etc., to the wrapper element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.FindChip(System.String)">
+            <summary>
+            A function that finds chip based on given chip value.
+            </summary>
+            <param name="chipValue">Value of the chip need to be passed to get the corresponding chip model.</param>
+            <returns>GetItem.</returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.GetSelectedChips">
+            <summary>
+            A function that returns selected chips data.
+            </summary>
+            <returns>selectedChipModels.</returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.RemoveChips(System.String[])">
+            <summary>
+            A function that removes chip items based on given chip values.
+            </summary>
+            <param name="removableChipValues">Values of the chips which are to be removed should be passed.</param>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.SelectChips(System.String[])">
+            <summary>
+            A function that selects chip items based on given index.
+            </summary>
+            <param name="selectableChips">Values of the chips which are to be selected should be passed.</param>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfChip.AddChip(Syncfusion.Blazor.Buttons.ChipItem)">
+            <summary>
+            A function that adds chip items based on given input.
+            </summary>
+            <param name="item">Chip Item to be added should be passed.</param>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.LabelPosition">
+            <summary>
+            Defines the label position of component.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.LabelPosition.After">
+            <summary>
+            To position label after the component.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.LabelPosition.Before">
+            <summary>
+            To position label before the component.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.ChangeEventArgs`1">
+            <summary>
+            Arguments for `ValueChange` event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChangeEventArgs`1.Checked">
+            <summary>
+            Returns the checked value of the component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChangeEventArgs`1.Event">
+            <summary>
+            Returns the event parameters of the component.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.ChangeArgs`1">
+            <summary>
+            Interface for Radio Button change event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChangeArgs`1.Value">
+            <summary>
+            Returns the value of the RadioButton.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.ChangeArgs`1.Event">
+            <summary>
+            Returns the event parameters of the RadioButton.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.CheckBoxModel`1">
+            <summary>
+            Interface for a class CheckBox.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.Checked">
+            <summary>
+            Specifies a value that indicates whether the CheckBox is `checked` or not.
+            When set to `true`, the CheckBox will be in `checked` state.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.CssClass">
+            <summary>
+            Defines class/multiple classes separated by a space in the CheckBox element.
+            You can add custom styles to the CheckBox by using this property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.Disabled">
+            <summary>
+            Specifies a value that indicates whether the CheckBox is `disabled` or not.
+            When set to `true`, the CheckBox will be in `disabled` state.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.EnablePersistence">
+            <summary>
+            Enable or disable persisting component's state between page reloads.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.EnableRtl">
+            <summary>
+            Enable or disable rendering component in right to left direction.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.HtmlAttributes">
+            <summary>
+            You can add the additional html attributes such as disabled, value etc., to the element.
+            If you configured both property and equivalent html attribute then the component considers the property value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.Indeterminate">
+            <summary>
+            Specifies a value that indicates whether the CheckBox is in `indeterminate` state or not.
+            When set to `true`, the CheckBox will be in `indeterminate` state.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.Label">
+            <summary>
+            Defines the caption for the CheckBox, that describes the purpose of the CheckBox.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.LabelPosition">
+            <summary>
+            Positions label `before`/`after` the CheckBox.
+            The possible values are:
+             Before - The label is positioned to left of the CheckBox.
+             After - The label is positioned to right of the CheckBox.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.Name">
+            <summary>
+            Defines `name` attribute for the CheckBox.
+            It is used to reference form data (CheckBox value) after a form is submitted.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.CheckBoxModel`1.Value">
+            <summary>
+            Defines `value` attribute for the CheckBox.
+            It is a form data passed to the server when submitting the form.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SfInputBase`1">
+            <summary>
+            Base class for form input components.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.ChildContent">
+            <exclude/>
+            <summary>
+            Gets or sets a value that indictes the child content for the component including HTML element.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.CssClass">
+            <summary> 
+            Gets or sets a value that indicates CSS class string to customize the appearance of the component. 
+            </summary> 
+            <value> 
+            Accepts a CSS class string separated by space to customize the appearance of the component. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Name">
+            <summary> 
+            Gets or sets a value that indicates the name of the component. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+            <remarks> 
+            The <see cref="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Name"/> property is used to set the name attribute of input element. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Value">
+            <summary> 
+            Gets or sets a value that indicates the value of the component. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+            <remarks> 
+            The <see cref="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Value"/> property is used to set the value attribute of input element. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Checked">
+            <summary> 
+            Gets or sets whether to check or uncheck the component. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the component is checked. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.CheckedChanged">
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.CheckedExpression">
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Disabled">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable the component. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the component is disabled. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.EnableRtl">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable the right to left direction option for the component. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the right to left direction is enabled for the component. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.EnablePersistence">
+            <summary> 
+            Gets or sets a value that indicates whether to persist component's state between page reloads. When set to <c>true</c>, the <see cref="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Checked" /> property is persisted. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the component's state persistence is enabled. The default value is <c>false</c>. 
+            </value> 
+            <remarks> 
+            Component's <see cref="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Checked"/> property will be stored in browser local storage to persist component's state when page reloads. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.HtmlAttributes">
+            <exclude/>
+            <summary> 
+            Gets or sets a a value that indicates the collection of additional attributes that will applied to the button container element. 
+            </summary> 
+            <remarks> 
+            Additional attributes can be added by specifying as inline attributes or by specifying <c>@attributes</c> directive. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfInputBase`1.Created">
+            <summary> 
+            Gets or sets an event callback that is raised when the component rendering is completed.  
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfInputBase`1.FocusIn">
+            <summary>
+            Sets the focus to component.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfInputBase`1.FocusAsync">
+            <summary> 
+            focuses the component to perform check/uncheck. 
+            </summary> 
+            <returns><see cref="T:System.Threading.Tasks.Task"/>.</returns> 
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SfFab">
+            <summary> 
+            The Blazor FAB Component (Floating Action Button) is an extension of <see cref="T:Syncfusion.Blazor.Buttons.SfButton"/> that appears in front of all the contents of the page and performs the primary action.
+            </summary> 
+            <example> 
+            A simple FAB with text content.
+            <code><![CDATA[ 
+            <SfFab Content="Click"/>
+            ]]></code> 
+            FAB with icon.
+            <code><![CDATA[ 
+            <SfFab IconCss="e-icons e-search"/> 
+            ]]></code> 
+            FAB with icon and text.
+            <code><![CDATA[ 
+            <SfFab IconCss="e-icons e-search" Content="Search"/>
+            ]]></code> 
+            FAB with info button style.
+            <code><![CDATA[ 
+            <SfFab CssClass="e-info" IconCss="e-icons e-search"/>
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfFab.IsPrimary">
+            <summary> 
+            Gets or sets a value that indicates whether to apply primary style for FAB. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the primary style is applied for FAB component. The default value is <c>true</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfFab.Target">
+            <summary> 
+            Gets or sets the selector that points to an element in which the FAB will be positioned. 
+            </summary> 
+            <value> 
+            The default value is <c>null</c> where FAB is positioned based on viewport of browser.
+            </value> 
+            <remarks>
+            The target element must have relative position, else FAB will get positioned based on the closest element which has relative position.
+            </remarks>
+            <example> 
+            Simple FAB with target.
+            <code><![CDATA[ 
+            <div id="target_element" style="position:relative;"></div>
+            <SfFab Content="Click" Target="#target_element"/>
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfFab.Visible">
+            <summary> 
+            Gets or sets a value that indicates whether the FAB is visible or hidden. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the FAB is visible. The default value is <c>true</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfFab.Position">
+            <summary> 
+            Gets or sets the value that indicates the position of the FAB relative to <see cref="P:Syncfusion.Blazor.Buttons.SfFab.Target"/>. 
+            </summary> 
+            <value> 
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.FabPosition"/> enumeration that specifies the position of FAB. The default value is <see cref="F:Syncfusion.Blazor.Buttons.FabPosition.BottomRight"/>.
+            </value> 
+            <remarks>
+            To refresh the position of FAB on <see cref="P:Syncfusion.Blazor.Buttons.SfFab.Target"/> resized, use <see cref="M:Syncfusion.Blazor.Buttons.SfFab.RefreshPositionAsync"/> method. 
+            The position will be refreshed automatically when browser resized.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfFab.RenderBase">
+            <summary>
+            Gets the render tree of the base element (SfButton) to render.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfFab.RefreshPositionAsync">
+            <summary>
+            Refreshes the FAB position. You can call this method to re-position FAB when <see cref="P:Syncfusion.Blazor.Buttons.SfFab.Target"/> is resized. 
+            </summary>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfFab.UpdatePosition(System.String,System.String)">
+            <summary>
+            Method invoked from interop when the viewport is resized.
+            </summary>
+            <remarks>
+            Internal purpose.
+            </remarks>
+            <exclude/>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfFab.getClientProps(System.String)">
+            <summary>
+            Sents request to interop and gets the offset values and whether the fab is fixed.
+            </summary>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfFab.SetPosition">
+            <summary>
+            Adds attributes and classes for the position of fab.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfFab.updateStyleAttribute(System.String,System.String)">
+            <summary>
+            Update the html attributes list of fab with position related style attributes (horixontal and vertical offset).
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.FabPosition">
+            <summary>
+            Defines the position of <see cref="T:Syncfusion.Blazor.Buttons.SfFab"/> in <see cref="P:Syncfusion.Blazor.Buttons.SfFab.Target"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.TopLeft">
+            <summary>
+            Positions the FAB at the target's top left corner.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.TopCenter">
+            <summary>
+            Places the FAB on the top-center position of the target.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.TopRight">
+            <summary>
+            Positions the FAB at the target's top right corner.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.MiddleLeft">
+            <summary>
+            Positions the FAB in the middle of target's left side.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.MiddleCenter">
+            <summary>
+            Positions the FAB in the center of target.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.MiddleRight">
+            <summary>
+            Positions the FAB in the middle of target's right side.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.BottomLeft">
+            <summary>
+            Positions the FAB at the target's bottom left corner.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.BottomCenter">
+            <summary>
+            Places the FAB on the bottom-center position of the target.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.FabPosition.BottomRight">
+            <summary>
+            Positions the FAB at the target's bottom right corner.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.IconName">
+            <summary>
+            Defines the icon names that can be rendered in <see cref="T:Syncfusion.Blazor.Buttons.SfIcon"/> using <see cref="P:Syncfusion.Blazor.Buttons.SfIcon.Name"/> property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AboveAverage">
+            <summary>
+            Defines above average icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AddChartElement">
+            <summary>
+            Defines add chart element icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Adjustment">
+            <summary>
+            Defines adjustment icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AgendaDateRange">
+            <summary>
+            Defines agenda date range icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AlignBottom">
+            <summary>
+            Defines align bottom icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AlignCenter">
+            <summary>
+            Defines align center icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AlignLeft">
+            <summary>
+            Defines align left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AlignMiddle">
+            <summary>
+            Defines align middle icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AlignRight">
+            <summary>
+            Defines align right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AlignTop">
+            <summary>
+            Defines align top icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.All">
+            <summary>
+            Defines all icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AnnotationEdit">
+            <summary>
+            Defines annotation-edit icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Area">
+            <summary>
+            Defines area icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ArrowDown">
+            <summary>
+            Defines arrow down icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ArrowLeft">
+            <summary>
+            Defines arrow left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ArrowRight">
+            <summary>
+            Defines arrow right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ArrowRightUp">
+            <summary>
+            Defines arrow right up icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ArrowUp">
+            <summary>
+            Defines arrow up icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Audio">
+            <summary>
+            Defines audio icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AutoFitContent">
+            <summary>
+            Defines auto fit content icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.AutoFitWindow">
+            <summary>
+            Defines auto fit window icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BelowAverage">
+            <summary>
+            Defines below average icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Between">
+            <summary>
+            Defines between icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Bold">
+            <summary>
+            Defines bold icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Bookmark">
+            <summary>
+            Defines bookmark icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderAll">
+            <summary>
+            Defines border all icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderBottom">
+            <summary>
+            Defines border bottom icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderBox">
+            <summary>
+            Defines border box icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderCenter">
+            <summary>
+            Defines border center icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderCustom">
+            <summary>
+            Defines border custom icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderDiagonal1">
+            <summary>
+            Defines border diagonal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderDiagonal2">
+            <summary>
+            Defines border diagonal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderDiagonalDown">
+            <summary>
+            Defines border diagonal down icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderDiagonalUp">
+            <summary>
+            Defines border diagonal up icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderInner">
+            <summary>
+            Defines border inner icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderLeft">
+            <summary>
+            Defines border left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderMiddle">
+            <summary>
+            Defines border middle icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderNone">
+            <summary>
+            Defines border none icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderNone1">
+            <summary>
+            Defines border none icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderOuter">
+            <summary>
+            Defines border outer icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderRight">
+            <summary>
+            Defines border right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderShadow">
+            <summary>
+            Defines border shadow icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderShadow2">
+            <summary>
+            Defines border shadow icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BorderTop">
+            <summary>
+            Defines border top icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BottomTen">
+            <summary>
+            Defines bottom 10 icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BottomTenItems">
+            <summary>
+            Defines bottom 10 items icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Box">
+            <summary>
+            Defines box icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Break">
+            <summary>
+            Defines break icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BreakPage">
+            <summary>
+            Defines break page icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BreakSection">
+            <summary>
+            Defines break section icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Brightness">
+            <summary>
+            Defines brightness icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BringForward">
+            <summary>
+            Defines bring forward icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BringToCenter">
+            <summary>
+            Defines bring to center icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BringToFront">
+            <summary>
+            Defines bring to front icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.BringToView">
+            <summary>
+            Defines bring to view icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Bullet1">
+            <summary>
+            Defines bullet icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Bullet2">
+            <summary>
+            Defines bullet icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Bullet3">
+            <summary>
+            Defines bullet icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Bullet4">
+            <summary>
+            Defines bullet icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Bullet5">
+            <summary>
+            Defines bullet icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Bullet6">
+            <summary>
+            Defines bullet icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CalculatedMember">
+            <summary>
+            Defines calculated member icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Caption">
+            <summary>
+            Defines caption icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Cell">
+            <summary>
+            Defines cell icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChangeCase">
+            <summary>
+            Defines change case icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChangesAccept">
+            <summary>
+            Defines changes accept icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChangeScaleRatio">
+            <summary>
+            Defines change scale ratio icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChangesReject">
+            <summary>
+            Defines changes reject icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChangesTrack">
+            <summary>
+            Defines changes track icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart">
+            <summary>
+            Defines chart icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2D100PercentStackedArea">
+            <summary>
+            Defines chart 2d 100 percent stacked area icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2D100PercentStackedBar">
+            <summary>
+            Defines chart 2d 100 percent stacked bar icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2D100PercentStackedColumn">
+            <summary>
+            Defines chart 2d 100 percent stacked column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2D100PercentStackedLine">
+            <summary>
+            Defines chart 2d 100 percent stacked line icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DArea">
+            <summary>
+            Defines chart 2d area icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DClusteredBar">
+            <summary>
+            Defines chart 2d clustered bar icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DClusteredColumn">
+            <summary>
+            Defines chart 2d clustered column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DLine">
+            <summary>
+            Defines chart 2d line icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DPie">
+            <summary>
+            Defines chart 2d pie 2 icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DStackedArea">
+            <summary>
+            Defines chart 2d stacked area icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DStackedBar">
+            <summary>
+            Defines chart 2d stacked bar icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DStackedColumn">
+            <summary>
+            Defines chart 2d stacked column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Chart2DStackedLine">
+            <summary>
+            Defines chart 2d stacked line icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartAxes">
+            <summary>
+            Defines chart axes icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartAxesPrimaryHorizontal">
+            <summary>
+            Defines chart axes primary horizontal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartAxesPrimaryVertical">
+            <summary>
+            Defines chart axes primary vertical icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartAxisTitles">
+            <summary>
+            Defines chart axis titles icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartAxisTitlesPrimaryHorizontal">
+            <summary>
+            Defines chart axis titles primary horizontal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartAxisTitlesPrimaryVertical">
+            <summary>
+            Defines chart axis titles primary vertical icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartDataLabels">
+            <summary>
+            Defines chart data labels icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartDataLabelsCenter">
+            <summary>
+            Defines chart data labels center icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartDataLabelsInsideBase">
+            <summary>
+            Defines chart data labels inside base icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartDataLabelsInsideEnd">
+            <summary>
+            Defines chart data labels inside end icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartDataLabelsNone">
+            <summary>
+            Defines chart data labels none icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartDataLabelsOutsideEnd">
+            <summary>
+            Defines chart data labels outside end icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartDonut">
+            <summary>
+            Defines chart donut icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartGridlines">
+            <summary>
+            Defines chart gridlines icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartInsertBar">
+            <summary>
+            Defines chart insert bar icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartInsertColumn">
+            <summary>
+            Defines chart insert column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartInsertLine">
+            <summary>
+            Defines chart insert line icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartInsertPie">
+            <summary>
+            Defines chart insert pie icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartInsertXYScatter">
+            <summary>
+            Defines chart insert x y scatter icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartLegend">
+            <summary>
+            Defines chart legend icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartLegendBottom">
+            <summary>
+            Defines chart legend bottom icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartLegendLeft">
+            <summary>
+            Defines chart legend left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartLegendNone">
+            <summary>
+            Defines chart legend none icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartLegendRight">
+            <summary>
+            Defines chart legend right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartLegendTop">
+            <summary>
+            Defines chart legend top icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartLines">
+            <summary>
+            Defines chart lines icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartPrimaryMajorHorizontal">
+            <summary>
+            Defines chart primary major horizontal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartPrimaryMajorVertical">
+            <summary>
+            Defines chart primary major vertical icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartPrimaryMinorHorizontal">
+            <summary>
+            Defines chart primary minor horizontal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartPrimaryMinorVertical">
+            <summary>
+            Defines chart primary minor vertical icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartSwitchRowColumn">
+            <summary>
+            Defines chart switch row column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartTitle">
+            <summary>
+            Defines chart title icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartTitleCenteredOverlay">
+            <summary>
+            Defines chart title centered overlay icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChartTitleNone">
+            <summary>
+            Defines chart title none icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Check">
+            <summary>
+            Defines check icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CheckBox">
+            <summary>
+            Defines check box icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronDown">
+            <summary>
+            Defines chevron down icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronDownDouble">
+            <summary>
+            Defines chevron down double icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronDownFill">
+            <summary>
+            Defines chevron down fill icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronLeft">
+            <summary>
+            Defines chevron left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronLeftDouble">
+            <summary>
+            Defines chevron left double icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronLeftFill">
+            <summary>
+            Defines chevron left fill icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronLeftSmall">
+            <summary>
+            Defines chevron left small icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronRight">
+            <summary>
+            Defines chevron right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronRightDouble">
+            <summary>
+            Defines chevron right double icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronRightFill">
+            <summary>
+            Defines chevron right fill icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronRightSmall">
+            <summary>
+            Defines chevron right small icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronUp">
+            <summary>
+            Defines chevron up icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronUpDouble">
+            <summary>
+            Defines chevron up double icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ChevronUpFill">
+            <summary>
+            Defines chevron up fill icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Circle">
+            <summary>
+            Defines circle icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CircleAdd">
+            <summary>
+            Defines circle add icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CircleCheck">
+            <summary>
+            Defines circle check icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CircleClose">
+            <summary>
+            Defines circle close icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CircleInfo">
+            <summary>
+            Defines circle info icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CircleRemove">
+            <summary>
+            Defines circle remove icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ClearForm">
+            <summary>
+            Defines clear form icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ClearFormat">
+            <summary>
+            Defines clear format icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ClearRules">
+            <summary>
+            Defines clear rules icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Clock">
+            <summary>
+            Defines clock icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Close">
+            <summary>
+            Defines close icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CodeView">
+            <summary>
+            Defines code view icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Collapse">
+            <summary>
+            Defines collapse icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ColorScales">
+            <summary>
+            Defines color scales icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CommentAdd">
+            <summary>
+            Defines comment add icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CommentReopen">
+            <summary>
+            Defines comment reopen icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CommentShow">
+            <summary>
+            Defines comment show icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ConditionalFormatting">
+            <summary>
+            Defines conditional formatting icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ConditionalFormattingLarge">
+            <summary>
+            Defines conditional formatting large icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ContinuousPageBreak">
+            <summary>
+            Defines page continuous page break icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ContinueNumbering">
+            <summary>
+            Defines continue numbering icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Contrast">
+            <summary>
+            Defines contrast icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Copy">
+            <summary>
+            Defines copy icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.CriticalPath">
+            <summary>
+            Defines critical path icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Crop">
+            <summary>
+            Defines crop icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Cut">
+            <summary>
+            Defines cut icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DataBars">
+            <summary>
+            Defines data bars icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DataValidation">
+            <summary>
+            Defines data validation icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DateOccurring">
+            <summary>
+            Defines date occurring icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Day">
+            <summary>
+            Defines day icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DecreaseIndent">
+            <summary>
+            Defines decrease indent icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DeleteColumn">
+            <summary>
+            Defines delete column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DeleteRow">
+            <summary>
+            Defines delete row icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Description">
+            <summary>
+            Defines description icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Dimension">
+            <summary>
+            Defines dimension icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Display">
+            <summary>
+            Defines display icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Download">
+            <summary>
+            Defines download icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DragAndDrop">
+            <summary>
+            Defines drag and drop icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DragAndDropIndicator">
+            <summary>
+            Defines drag and drop indicator icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DragFill">
+            <summary>
+            Defines drag fill icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DropDown">
+            <summary>
+            Defines drop down icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.DuplicateCell">
+            <summary>
+            Defines duplicate cell icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Edit">
+            <summary>
+            Defines edit icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.EndFootnote">
+            <summary>
+            Defines end footnote icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.EqualTo">
+            <summary>
+            Defines equalto icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Erase">
+            <summary>
+            Defines erase icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ErrorTreeview">
+            <summary>
+            Defines error treeview icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.EvenPageBreak">
+            <summary>
+            Defines even page break icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ExitFullScreen">
+            <summary>
+            Defines exit full screen icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Expand">
+            <summary>
+            Defines expand icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Export">
+            <summary>
+            Defines export icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ExportCsv">
+            <summary>
+            Defines export csv icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ExportExcel">
+            <summary>
+            Defines export excel icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ExportPdf">
+            <summary>
+            Defines export pdf icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ExportPng">
+            <summary>
+            Defines export png icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ExportSvg">
+            <summary>
+            Defines export svg icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ExportXls">
+            <summary>
+            Defines export xls icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Eye">
+            <summary>
+            Defines eye icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.EyeSlash">
+            <summary>
+            Defines eye slash icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Fade">
+            <summary>
+            Defines fade icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FieldSettings">
+            <summary>
+            Defines field settings icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FileNew">
+            <summary>
+            Defines file new icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Filter">
+            <summary>
+            Defines filter icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Filters">
+            <summary>
+            Defines filters icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FilterActive">
+            <summary>
+            Defines filter active icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FilterClear">
+            <summary>
+            Defines filter clear icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Filtered">
+            <summary>
+            Defines filtered icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FilteredSortAscending">
+            <summary>
+            Defines filtered sort ascending icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FilteredSortDescending">
+            <summary>
+            Defines filtered sort descending icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FilterMain">
+            <summary>
+            Defines filter main icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FirstPage">
+            <summary>
+            Defines first page icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FixedColumnWidth">
+            <summary>
+            Defines fixed column width icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FlipHorizontal">
+            <summary>
+            Defines flip horizontal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FlipVertical">
+            <summary>
+            Defines flip vertical icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Folder">
+            <summary>
+            Defines folder icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FolderOpen">
+            <summary>
+            Defines folder open icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FontColor">
+            <summary>
+            Defines font color icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FontName">
+            <summary>
+            Defines font name icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Footer">
+            <summary>
+            Defines footer icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FormField">
+            <summary>
+            Defines form field icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Frame1">
+            <summary>
+            Defines frame icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Frame2">
+            <summary>
+            Defines frame icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Frame3">
+            <summary>
+            Defines frame icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Frame4">
+            <summary>
+            Defines frame icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Frame5">
+            <summary>
+            Defines frame icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Frame6">
+            <summary>
+            Defines frame icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FrameCustom">
+            <summary>
+            Defines custom frame icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FreezeColumn">
+            <summary>
+            Defines freeze column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FreezePane">
+            <summary>
+            Defines freeze pane icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FreezeRow">
+            <summary>
+            Defines freeze row icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.FullScreen">
+            <summary>
+            Defines full screen icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.GanttGripper">
+            <summary>
+            Defines gantt gripper icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Grain">
+            <summary>
+            Defines grain icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.GrandTotal">
+            <summary>
+            Defines grand total icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.GreaterThan">
+            <summary>
+            Defines greater than icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.GridView">
+            <summary>
+            Defines grid view icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.GripVertical">
+            <summary>
+            Defines grip vertical icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Group1">
+            <summary>
+            Defines group icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Group2">
+            <summary>
+            Defines group icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.GroupIcon">
+            <summary>
+            Defines group icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Header">
+            <summary>
+            Defines header icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.HideFormulaBar">
+            <summary>
+            Defines hide formula bar icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.HideGridlines">
+            <summary>
+            Defines hide gridlines icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.HideHeadings">
+            <summary>
+            Defines hide headings icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Highlight">
+            <summary>
+            Defines highlight icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.HighlightColor">
+            <summary>
+            Defines highlight color icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Home">
+            <summary>
+            Defines home icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.HyperlinkCopy">
+            <summary>
+            Defines hyperlink copy icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.HyperlinkEdit">
+            <summary>
+            Defines hyperlink edit icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.HyperlinkOpen">
+            <summary>
+            Defines hyperlink open icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.HyperlinkRemove">
+            <summary>
+            Defines hyperlink remove icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.IconSets">
+            <summary>
+            Defines iconsets icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Image">
+            <summary>
+            Defines image icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.IncreaseIndent">
+            <summary>
+            Defines increase indent icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.InsertAbove">
+            <summary>
+            Defines insert above icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.InsertBelow">
+            <summary>
+            Defines insert below icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.InsertCode">
+            <summary>
+            Defines insert code icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.InsertLeft">
+            <summary>
+            Defines insert left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.InsertRight">
+            <summary>
+            Defines insert right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.IntermediateState">
+            <summary>
+            Defines intermediate state icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Italic">
+            <summary>
+            Defines italic icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Justify">
+            <summary>
+            Defines justify icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Kpi">
+            <summary>
+            Defines kpi icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.LastPage">
+            <summary>
+            Defines last page icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Length">
+            <summary>
+            Defines length icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.LessThan">
+            <summary>
+            Defines less than icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Level1">
+            <summary>
+            Defines level icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Level2">
+            <summary>
+            Defines level icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Level3">
+            <summary>
+            Defines level icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Level4">
+            <summary>
+            Defines level icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Level5">
+            <summary>
+            Defines level icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Line">
+            <summary>
+            Defines line icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.LineNormal">
+            <summary>
+            Defines line normal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.LineSmall">
+            <summary>
+            Defines line small icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.LineSpacing">
+            <summary>
+            Defines line spacing icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.LineVerySmall">
+            <summary>
+            Defines line very small icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Link">
+            <summary>
+            Defines link icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.LinkRemove">
+            <summary>
+            Defines link remove icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ListOrdered">
+            <summary>
+            Defines list ordered icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ListUnordered">
+            <summary>
+            Defines list unordered icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Location">
+            <summary>
+            Defines location icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Lock">
+            <summary>
+            Defines lock icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.LowerCase">
+            <summary>
+            Defines lower case icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Mdx">
+            <summary>
+            Defines mdx icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Menu">
+            <summary>
+            Defines menu icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.MergeCells">
+            <summary>
+            Defines merge cells icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Month">
+            <summary>
+            Defines month icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.MoreHorizontal">
+            <summary>
+            Defines more horizontal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.MoreScatterCharts">
+            <summary>
+            Defines more scatter chart icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.MoreVertical">
+            <summary>
+            Defines more vertical icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.MousePointer">
+            <summary>
+            Defines mouse pointer icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.NamedSet">
+            <summary>
+            Defines named set icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.NumberFormatting">
+            <summary>
+            Defines number formatting icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.OddPageBreak">
+            <summary>
+            Defines odd page break icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Opacity">
+            <summary>
+            Defines opacity icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.OpenLink">
+            <summary>
+            Defines open link icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Order">
+            <summary>
+            Defines order icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageColumn">
+            <summary>
+            Defines page column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageColumnLeft">
+            <summary>
+            Defines page column left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageColumnOne">
+            <summary>
+            Defines page column one icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageColumnRight">
+            <summary>
+            Defines page column right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageColumns">
+            <summary>
+            Defines page columns icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageColumnThree">
+            <summary>
+            Defines page-column-three icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageColumnTwo">
+            <summary>
+            Defines page column two icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageNumbering">
+            <summary>
+            Defines page numbering icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageSetup">
+            <summary>
+            Defines page setup icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageSize">
+            <summary>
+            Defines page size icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PageTextWrap">
+            <summary>
+            Defines page text wrap icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PaintBucket">
+            <summary>
+            Defines paint bucket icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Pan">
+            <summary>
+            Defines pan icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Paragraph">
+            <summary>
+            Defines paragraph icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Password">
+            <summary>
+            Defines password icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Paste">
+            <summary>
+            Defines paste icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PasteMatchDestination">
+            <summary>
+            Defines paste match destination icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PasteStyle">
+            <summary>
+            Defines paste style icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PasteTextOnly">
+            <summary>
+            Defines paste text only icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Pause">
+            <summary>
+            Defines pause icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.People">
+            <summary>
+            Defines people icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Perimeter">
+            <summary>
+            Defines perimeter icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Play">
+            <summary>
+            Defines play icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Plus">
+            <summary>
+            Defines plus icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Print">
+            <summary>
+            Defines print icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.PrintLayout">
+            <summary>
+            Defines print layout icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ProtectSheet">
+            <summary>
+            Defines protect sheet icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ProtectWorkbook">
+            <summary>
+            Defines protect workbook icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.RadioButton">
+            <summary>
+            Defines radio button icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Radius">
+            <summary>
+            Defines radius icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Reapply">
+            <summary>
+            Defines reapply icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Rectangle">
+            <summary>
+            Defines rectangle icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.RecurrenceEdit">
+            <summary>
+            Defines recurrence edit icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Redo">
+            <summary>
+            Defines redo icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Refresh">
+            <summary>
+            Defines refresh icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Rename">
+            <summary>
+            Defines rename icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Repeat">
+            <summary>
+            Defines repeat icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Replace">
+            <summary>
+            Defines replace icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Reset">
+            <summary>
+            Defines reset icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Resize">
+            <summary>
+            Defines resize icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.RestartAtOne">
+            <summary>
+            Defines restart at 1 icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Saturation">
+            <summary>
+            Defines saturation icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Save">
+            <summary>
+            Defines save icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SaveAs">
+            <summary>
+            Defines save as icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Search">
+            <summary>
+            Defines search icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SelectAll">
+            <summary>
+            Defines select all icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Selection">
+            <summary>
+            Defines selection icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SendBackward">
+            <summary>
+            Defines send backward icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SendToBack">
+            <summary>
+            Defines send to back icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Settings">
+            <summary>
+            Defines settings icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Shapes">
+            <summary>
+            Defines shapes icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Sharpness">
+            <summary>
+            Defines sharpness icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ShowHidePanel">
+            <summary>
+            Defines show/hide panel icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Signature">
+            <summary>
+            Defines signature icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SortAscending">
+            <summary>
+            Defines sort ascending icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SortAscending2">
+            <summary>
+            Defines sort ascending icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SortDescending">
+            <summary>
+            Defines sort descending icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SortDescending2">
+            <summary>
+            Defines sort descending icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Sorting1">
+            <summary>
+            Defines sorting icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Sorting2">
+            <summary>
+            Defines sorting icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Sorting3">
+            <summary>
+            Defines sorting icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SpellCheck">
+            <summary>
+            Defines spell check icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SplitHorizontal">
+            <summary>
+            Defines split horizontal icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SplitVertical">
+            <summary>
+            Defines split vertical icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Stamp">
+            <summary>
+            Defines stamp icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.StarFilled">
+            <summary>
+            Defines star filled icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Strikethrough">
+            <summary>
+            Defines strikethrough icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.StrokeWidth">
+            <summary>
+            Defines stroke width icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Style">
+            <summary>
+            Defines style icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Subscript">
+            <summary>
+            Defines subscript icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.SubTotal">
+            <summary>
+            Defines sub total icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Sum">
+            <summary>
+            Defines sum icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Superscript">
+            <summary>
+            Defines superscript icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Table">
+            <summary>
+            Defines table icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableAlignCenter">
+            <summary>
+            Defines table align center icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableAlignLeft">
+            <summary>
+            Defines table align left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableAlignRight">
+            <summary>
+            Defines table align right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableBorderCustom">
+            <summary>
+            Defines table border custom icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableCell">
+            <summary>
+            Defines table cell icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableCellNone">
+            <summary>
+            Defines table cell none icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableDelete">
+            <summary>
+            Defines table delete icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableInsertColumn">
+            <summary>
+            Defines table insert column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableInsertRow">
+            <summary>
+            Defines table insert row icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableMerge">
+            <summary>
+            Defines table merge icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableNested">
+            <summary>
+            Defines table nested icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableOfContent">
+            <summary>
+            Defines table of content icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableOverwriteCells">
+            <summary>
+            Defines table overwrite cells icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TableUpdate">
+            <summary>
+            Defines table update icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TextAlternative">
+            <summary>
+            Defines text alternative icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TextAnnotation">
+            <summary>
+            Defines text annotation icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TextForm">
+            <summary>
+            Defines text form icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TextHeader">
+            <summary>
+            Defines text header icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TextThatContains">
+            <summary>
+            Defines text that contains icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TextWrap">
+            <summary>
+            Defines text wrap icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Thumbnail">
+            <summary>
+            Defines thumbnail icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Tint">
+            <summary>
+            Defines tint icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TimelineDay">
+            <summary>
+            Defines timeline day icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TimelineMonth">
+            <summary>
+            Defines timeline month icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TimelineToday">
+            <summary>
+            Defines timeline today icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TimelineWeek">
+            <summary>
+            Defines timeline week icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TimelineWorkWeek">
+            <summary>
+            Defines timeline work week icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TimeZone">
+            <summary>
+            Defines time zone icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TopTen">
+            <summary>
+            Defines top 10 icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TopBottomRules">
+            <summary>
+            Defines top bottom rules icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Transform">
+            <summary>
+            Defines transform icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TransformLeft">
+            <summary>
+            Defines transform left icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TransformRight">
+            <summary>
+            Defines transform right icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Trash">
+            <summary>
+            Defines trash icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Triangle">
+            <summary>
+            Defines triangle icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TwoColumn">
+            <summary>
+            Defines two column icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.TwoRow">
+            <summary>
+            Defines two row icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Underline">
+            <summary>
+            Defines underline icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Undo">
+            <summary>
+            Defines undo icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Unfiltered">
+            <summary>
+            Defines unfiltered icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Ungroup1">
+            <summary>
+            Defines ungroup icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Ungroup2">
+            <summary>
+            Defines ungroup icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Upload">
+            <summary>
+            Defines upload icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.UpperCase">
+            <summary>
+            Defines upper case icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.UserDefined">
+            <summary>
+            Defines user defined icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.VerticalAlignBottom">
+            <summary>
+            Defines vertical align bottom icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.VerticalAlignCenter">
+            <summary>
+            Defines vertical align center icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.VerticalAlignTop">
+            <summary>
+            Defines vertical align top icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Video">
+            <summary>
+            Defines video icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ViewSide">
+            <summary>
+            Defines view side icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Volume">
+            <summary>
+            Defines volume icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Warning">
+            <summary>
+            Defines warning icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.WebLayout">
+            <summary>
+            Defines web layout icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.Week">
+            <summary>
+            Defines week icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ZoomIn">
+            <summary>
+            Defines zoom in icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ZoomOut">
+            <summary>
+            Defines zoom out icon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconName.ZoomToFit">
+            <summary>
+            Defines zoom to fit icon.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.IconSize">
+            <summary>
+            Defines the icons to render with predefined size.
+            IconSize will be included only when the icons will render using <see cref="P:Syncfusion.Blazor.Buttons.SfIcon.Name"/> property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconSize.Small">
+            <summary>
+            Denotes the smaller size of icon.
+            The icon size will be `8px`.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconSize.Medium">
+            <summary>
+            Denotes the default size of icon.
+            The icon size will be `16px`.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.IconSize.Large">
+            <summary>
+            Denotes the larger size of icon.
+            The icon size will be `24px`.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SfIcon">
+            <summary>
+            SfIcon component used to render the predefined syncfusion icons using <see cref="P:Syncfusion.Blazor.Buttons.SfIcon.Name"/> property or custom font icons using <see cref="P:Syncfusion.Blazor.Buttons.SfIcon.IconCss"/> property.
+            </summary>
+            <example>
+            The below example shows loading syncfusion icon using <see cref="P:Syncfusion.Blazor.Buttons.SfIcon.Name"/> property.
+            <code><![CDATA[
+            <SfIcon Name="IconName.Italic" Title="Italic"></SfIcon>
+            ]]></code>
+            The below example shows loading syncfusion icon using <see cref="P:Syncfusion.Blazor.Buttons.SfIcon.IconCss"/> property.
+            <code><![CDATA[
+            <SfIcon IconCss="e-icons e-bold" Title="Bold"></SfIcon>
+            ]]></code>
+            The below example shows loading third party icon using <see cref="T:Syncfusion.Blazor.Buttons.SfIcon"/> component.
+            Plus icon were loaded from open iconic, by defining the open iconic font CSS.
+            <code><![CDATA[
+            <SfIcon IconCss="oi oi-plus" Title="Plus"></SfIcon>
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfIcon.ChildContent">
+            <exclude/>
+            <summary>
+            Gets or sets the child content for Icon component.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfIcon.HtmlAttributes">
+            <summary>
+            Gets or sets a collection of additional attributes that will be applied to icon element.
+            </summary>
+            <remarks>
+            Additional attributes can be added by specifying as inline attributes or by specifying <c>@attributes</c> directive.
+            </remarks>
+            <example>
+            In the below code example, font size of the icon customized using <c>@attributes</c> directive.
+            <code><![CDATA[
+            <SfIcon Name="IconName.Copy" @attributes="customAttribute"></SfIcon>
+            @code{
+               Dictionary<string, object> customAttribute = new Dictionary<string, object>()
+               {
+                   { "style", "font-size: 20px" }
+               };
+            }
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfIcon.IconCss">
+            <summary>
+            Gets or sets a CSS class string which can be used to provide custom icon or custom style for icons.
+            </summary>
+            <value>
+            Accepts a CSS class string separated by space to provide custom icon or custom style for icons. The default value is <c>String.Empty</c>.
+            </value>
+            <remarks>
+            IconCss property used to append custom class to the predefined icons. This property will also render the customized icons like font-awesome icons.
+            </remarks>
+            <example>
+            In the below example custom icon is loaded using <c>IconCss</c> property.
+            <code><![CDATA[
+            <SfIcon IconCss="oi oi-home"></SfIcon>
+            ]]></code>
+            In the below example icon color is customized using <c>IconCss</c> property.
+            <code><![CDATA[
+            <SfIcon IconCss="oi oi-plus color-red"></SfIcon>
+            <style>
+                .color-red {
+                   color: red; 
+                }
+            </style>
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfIcon.Name">
+            <summary>
+            Gets or sets the name of the built-in syncfusion icons to render. 
+            </summary>
+            <value>
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.IconName"/> enumeration.
+            </value>
+            <remarks>
+            This property is used to render icons from predefined <see cref="T:Syncfusion.Blazor.Buttons.IconName"/> options. You can use <see cref="P:Syncfusion.Blazor.Buttons.SfIcon.IconCss"/> to load custom icons.
+            </remarks>
+            <example>
+            <code><![CDATA[
+            <SfIcon Name="IconName.Bold"></SfIcon>
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfIcon.Size">
+            <summary>
+            Gets or sets the size of the icon.
+            </summary>
+            <value>
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.IconSize"/> enumeration that specifies the size of the icon. 
+            The default value is <see cref="F:Syncfusion.Blazor.Buttons.IconSize.Medium"/>
+            </value>
+            <remarks>
+            The Size property used to set font size for icons. This property will considered only when icons are rendered using <see cref="P:Syncfusion.Blazor.Buttons.SfIcon.Name"/> property.
+            </remarks>
+            <example>
+            <code><![CDATA[
+            <SfIcon Name="IconName.Paste" Size="IconSize.Large"></SfIcon>
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfIcon.Title">
+            <summary>
+            Gets or sets title attribute for icon.
+            </summary>
+            <value>
+            Accepts a string. The default value is <c>String.Empty</c>.
+            </value>
+            <remarks>
+            Title attribute used to improve accessibility with screen readers and show a tooltip on mouse over the icon.
+            </remarks>
+            <example>
+            <code><![CDATA[
+            <SfIcon Name="IconName.Cut" Title="Cut"></SfIcon>
+            ]]></code>
+            </example>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfIcon.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)">
+            <summary>
+            Triggers while properties get dynamically changed in the component.
+            </summary>
+            <returns>System.Threading.Tasks.</returns>
+            <param name="parameters"><see cref="T:Microsoft.AspNetCore.Components.ParameterView"/> parameters.</param>
+            <exclude/>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SfRadioButton`1">
+            <summary> 
+            RadioButton is a graphical user interface element that allows you to select one option from the choices. 
+            It has checked and unchecked states. 
+            </summary> 
+            <example> 
+            In the below code example, a basic radiobutton is initialized with <c>Checked</c> property. 
+            <code><![CDATA[ 
+            <SfRadioButton Checked="true"> 
+            </SfRadioButton> 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfRadioButton`1.Label">
+            <summary> 
+            Gets or sets a value that indicates the label of radio button. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfRadioButton`1.LabelPosition">
+            <summary> 
+            Gets or sets a value that indicates how to display label in the radio button. 
+            </summary> 
+            <value> 
+            One of the <see cref="P:Syncfusion.Blazor.Buttons.SfRadioButton`1.LabelPosition"/> enumeration. The default value is <see cref="F:Syncfusion.Blazor.Buttons.LabelPosition.Before"/> 
+            </value> 
+            <remarks> 
+            If the <c>LabelPosition</c> is <c>Before</c>, the label will be placed to the left side of the Radio Button. 
+            If the <c>LabelPosition</c> is <c>After</c>, the icon will be placed to the right side of the Radio Button. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfRadioButton`1.ValueChange">
+            <summary> 
+            Gets or sets an event callback that is raised when the radio button state is changed.  
+            </summary> 
+            <remarks> 
+            The event is raised for UI based click only. 
+            </remarks> 
+            <example> 
+            <code><![CDATA[ 
+            <SfRadioButton ValueChange="@Changed"> 
+            </SfRadioButton> 
+            @code { 
+                private void Changed(ChangeEventArgs<TChecked> args) { 
+                    // Write your code here. 
+                } 
+            } 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialMode">
+            <summary>
+            Defines the display mode of speed dial action items (<see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/>) in <see cref="T:Syncfusion.Blazor.Buttons.SfSpeedDial"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialMode.Linear">
+            <summary>
+            SpeedDial items are displayed in linear order like list.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialMode.Radial">
+            <summary>
+            SpeedDial items are displayed like radial menu in radial direction (circular direction).
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.LinearDirection">
+            <summary>
+            Defines the speed dial action items (<see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/>) display direction when <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Mode"/> is <see cref="F:Syncfusion.Blazor.Buttons.SpeedDialMode.Linear"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.LinearDirection.Up">
+            <summary>
+            Speed dial action items are displayed vertically above the button of Speed Dial.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.LinearDirection.Down">
+            <summary>
+            Speed dial action items are displayed vertically below the button of Speed Dial.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.LinearDirection.Right">
+            <summary>
+            Speed dial action items are displayed horizontally on the button's right side.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.LinearDirection.Left">
+            <summary>
+            Speed dial action items are displayed horizontally on the button's left side.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.LinearDirection.Auto">
+            <summary>
+            Speed dial action items are displayed vertically above or below the button of Speed Dial based on the <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Position"/>.
+            </summary>
+            <remarks>
+            If <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Position"/> is <c>TopRight, TopCenter, TopRight</c>, items are displayed vertically below button else above the button.
+            </remarks>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.RadialDirection">
+            <summary>
+            Defines the speed dial action items (<see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/>) order, when <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Mode"/> is <see cref="F:Syncfusion.Blazor.Buttons.SpeedDialMode.Radial"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.RadialDirection.Clockwise">
+            <summary>
+            SpeedDial items are arranged in clockwise direction.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.RadialDirection.AntiClockwise">
+            <summary>
+            SpeedDial items are shown in anti-clockwise direction.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.RadialDirection.Auto">
+            <summary>
+            SpeedDial items are shown clockwise or anti-clockwise based on the <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Position"/>.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect">
+            <summary>
+            Defines the animation effect applied when open and close the speed dial items.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.Fade">
+            <summary>
+            SpeedDial open/close actions occur with the Fade animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FadeZoom">
+            <summary>
+            SpeedDial open/close actions occur with the FadeZoom animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FlipLeftDown">
+            <summary>
+            SpeedDial open/close actions occur with the FlipLeftDown animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FlipLeftUp">
+            <summary>
+            SpeedDial open/close actions occur with the FlipLeftUp animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FlipRightDown">
+            <summary>
+            SpeedDial open/close actions occur with the FlipRightDown animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FlipRightUp">
+            <summary>
+            SpeedDial open/close actions occur with the FlipRightUp animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FlipXDown">
+            <summary>
+            SpeedDial open/close actions occur with the FlipXDown animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FlipXUp">
+            <summary>
+            SpeedDial open/close actions occur with the FlipXUp animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FlipYLeft">
+            <summary>
+            SpeedDial open/close actions occur with the FlipYLeft animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.FlipYRight">
+            <summary>
+            SpeedDial open/close actions occur with the FlipYRight animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.SlideBottom">
+            <summary>
+            SpeedDial open/close actions occur with the SlideBottom animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.SlideLeft">
+            <summary>
+            SpeedDial open/close actions occur with the SlideLeft animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.SlideRight">
+            <summary>
+            SpeedDial open/close actions occur with the SlideRight animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.SlideTop">
+            <summary>
+            SpeedDial open/close actions occur with the SlideTop animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.Zoom">
+            <summary>
+            SpeedDial open/close actions occur with the Zoom animation effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.None">
+            <summary>
+            SpeedDial open/close actions occur without any animation effect.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs">
+            <summary>
+            Provides information about the <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Opening"/> and the <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Closing"/> event callback.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs.Cancel">
+            <summary>
+            Gets or sets whether the to cancel the open/close action of speed dial.
+            </summary>
+            <remarks>
+             Speed dial displays list of action buttons on click and the list is closed when speed dial item clicked.
+             </remarks>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs.Element">
+            <summary>
+            Gets the popup element reference.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs">
+            <summary>
+            Provides information about the <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.ItemRendered"/> and the <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.ItemClicked"/> event callback.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.Element">
+            <summary>
+            Gets the selected speed dial item element reference.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.Item">
+            <summary>
+            Gets the selected speed dial item.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialOpenCloseEventArgs">
+            <summary>
+            Provides information about the in <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Opened"/> and <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Closed"/> event callback.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialOpenCloseEventArgs.Element">
+            <summary>
+            Gets the popup element reference.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SfSpeedDial">
+            <summary> 
+            The Blazor SpeedDial component that appears in front of all the contents of the page and 
+            displays list of action buttons on click which is an extended version of FAB.
+            </summary> 
+            <remarks>
+            The button of speed dial is positioned in relative to a view port of browser or <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Target"/>.
+            It can display a menu of related actions <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/> or a custom content <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.PopupTemplate"/>.
+            </remarks>
+            <example> 
+            A simple SpeedDial with action items.
+            <code><![CDATA[ 
+            <SfSpeedDial Content="Edit"> 
+                <SpeedDialItems>
+                    <SpeedDialItem Text="Cut"></SpeedDialItem
+                    <SpeedDialItem Text="Copy"></SpeedDialItem>
+                    <SpeedDialItem Text="Paste"></SpeedDialItem>
+                </SpeedDialItems>
+            </SfSpeedDial> 
+            ]]></code> 
+            A SpeedDial with popup template.
+            <code><![CDATA[ 
+             <SfSpeedDial Content="FeedBack"> 
+                <PopupTemplate>
+                    <div class="form-content">
+                        <h4 style = "text-align:center" > Feedback Form</h4>
+                        <b>Name</b><br>
+                        <input placeholder="Enter Name"><br>
+                        <b>Leave Your Comments</b>
+                        <textarea placeholder="Enter Your Comments" style="width:100%"></textarea><br>
+                        <button type="submit">Submit</button>
+                        <button>Cancel</button>
+                    </div>
+                </PopupTemplate>
+            </SfSpeedDial> 
+            ]]></code> 
+            </example> 
+            <seealso cref="T:Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings"/>
+            <seealso cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/>
+            <seealso cref="T:Syncfusion.Blazor.Buttons.SpeedDialRadialSettings"/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.CloseIconCss">
+            <summary> 
+            Gets or sets one or more CSS classes to include an icon or image to denote the speed dial is opened and displaying menu items.
+            </summary> 
+            <value> 
+            Accepts a CSS class string separated by space to include an icon or image for the button. The default value is String.Empty.
+            </value> 
+            <remarks> 
+            If the `CloseIconCss` is <c>String.Empty</c>, then the <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.OpenIconCss"/> is used when SpeedDial is open as well.
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Content">
+            <summary> 
+            Gets or sets the content for the button of SpeedDial. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.CssClass">
+            <summary> 
+            Gets or sets one or more CSS classes to customize the appearance of SpeedDial. 
+            </summary> 
+            <value> 
+            Accepts a CSS class string separated by space to customize the appearance of button. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Direction">
+            <summary>
+            Gets or sets the value that indicates the speed dial action items (<see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/>) display direction when <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Mode"/> is <see cref="F:Syncfusion.Blazor.Buttons.SpeedDialMode.Linear"/>. 
+            </summary> 
+            <value> 
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.LinearDirection"/> enumeration that specifies the direction of speed dial items in linear mode. The default value is <see cref="F:Syncfusion.Blazor.Buttons.LinearDirection.Auto"/>
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Disabled">
+            <summary> 
+            Gets or sets a value that indicates whether to enable or disable the SpeedDial. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the button component is disabled. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Mode">
+            <summary>
+            Gets or sets the value that indicates the display mode (linear and radial mode) of speed dial action items. 
+            </summary> 
+            <value> 
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialMode"/> enumeration that specifies how the speed dial items are displayed. The default value is <see cref="F:Syncfusion.Blazor.Buttons.SpeedDialMode.Linear"/>
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.IsModal">
+            <summary>
+            Gets or sets the value that indicates whether the speeddial popup can be displayed as modal or modal less.
+            </summary>
+            <value> 
+            <c>true</c>, if the Speed dial creates an overlay that disables interaction with other elements other than speed dial items. 
+            If user clicks anywhere other than speed dial items then popup will get closed.
+            The default value is <c>false</c>. 
+            </value>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.ItemTemplate">
+             <summary> 
+             Gets or sets a template content for the <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItem"/>. The template content is defined as a child content of <b>ItemTemplate</b> tag directive
+             </summary> 
+             <value> 
+             The template content. The default value is <c>null</c>. 
+             </value> 
+             <remarks>
+             The `ItemTemplate` used to define custom template for speed dial item. Use the template’s context parameter to access <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItem"/> properties.
+             </remarks>
+             <example> 
+             SpeedDial with item template.
+             <code><![CDATA[ 
+             <SfSpeedDial Content="Edit"> 
+                <ChildContent>
+                 <SpeedDialItems>
+                     <SpeedDialItem Text="Cut"></SpeedDialItem
+                     <SpeedDialItem Text="Copy"></SpeedDialItem>
+                     <SpeedDialItem Text="Paste"></SpeedDialItem>
+                 </SpeedDialItems>
+                </ChildContent>
+                <ItemTemplate>
+                     <div style = "border: 1px solid lightgreen; background-color:white;" >
+                         <span>@context.Text</span>
+                     </div>
+                </ItemTemplate> 
+            </SfSpeedDial> 
+             ]]></code> 
+             </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.OpenIconCss">
+            <summary> 
+            Gets or sets one or more CSS classes to include an icon or image for the button of SpeedDial when it's closed.  
+            </summary> 
+            <value> 
+            Accepts a CSS class string separated by space to include an icon or image for the SpeedDial. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.OpensOnHover">
+            <summary> 
+            Gets or sets a value that indicates whether to open the popup when the button of SpeedDial is hovered. By default, SpeedDial opens popup on click action.
+            </summary> 
+            <value> 
+            <c>true</c>, if the SpeedDial opens popup on mouse hover action. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.IconPosition">
+            <summary> 
+            Gets or sets the value that indicates the position of icon in the button of speed dial. 
+            </summary> 
+            <value> 
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.IconPosition"/> enumeration that specifies the position of icon. The default value is <see cref="F:Syncfusion.Blazor.Buttons.IconPosition.Left"/>.
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.PopupTemplate">
+            <summary> 
+            Gets or sets a template content for popup of SpeedDial. The template content is defined as a child content of <b>PopupTemplate</b> tag directive
+            </summary> 
+            <value> 
+            The template content. The default value is <c>null</c>. 
+            </value> 
+            <example> 
+            SpeedDial with popup template.
+            <code><![CDATA[ 
+             <SfSpeedDial Content="FeedBack"> 
+                <PopupTemplate>
+                    <div class="form-content">
+                        <h4 style = "text-align:center" > Feedback Form</h4>
+                        <b>Name</b><br>
+                        <input placeholder="Enter Name"><br>
+                        <b>Leave Your Comments</b>
+                        <textarea placeholder="Enter Your Comments" style="width:100%"></textarea><br>
+                        <button type="submit">Submit</button>
+                        <button>Cancel</button>
+                    </div>
+                </PopupTemplate>
+            </SfSpeedDial> 
+            ]]></code> 
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Position">
+            <summary> 
+            Gets or sets the value that indicates the position of the button of Speed Dial relative to <see cref="P:Syncfusion.Blazor.Buttons.SfFab.Target"/>. 
+            </summary> 
+            <value> 
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.FabPosition"/> enumeration that specifies the position of SpeedDial. The default value is <see cref="F:Syncfusion.Blazor.Buttons.FabPosition.BottomRight"/>.
+            </value> 
+            <remarks>
+            To refresh the position of button of speed dial on <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Target"/> resized, use <see cref="M:Syncfusion.Blazor.Buttons.SfSpeedDial.RefreshPositionAsync"/> method. 
+            The position will be refreshed automatically when browser resized.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Target">
+            <summary> 
+            Gets or sets the selector that points to the element in which the button of SpeedDial will be positioned. 
+            </summary> 
+            <value> 
+            The default value is <c>null</c> where button is positioned based on viewport of browser.
+            </value> 
+            <remarks>
+            The target element must have relative position, else Button will get positioned based on the closest element which has relative position.
+            </remarks>
+            <example> 
+            Simple SpeedDial with target.
+            <code><![CDATA[
+            <div id="target_element" style="position:relative;"></div>
+            <SfSpeedDial Content="Edit" Target="#arget_element"> 
+                <SpeedDialItems>
+                    <SpeedDialItem Text="Cut"></SpeedDialItem
+                    <SpeedDialItem Text="Copy"></SpeedDialItem>
+                    <SpeedDialItem Text="Paste"></SpeedDialItem>
+                </SpeedDialItems>
+            </SfSpeedDial> 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Visible">
+            <summary> 
+            Gets or sets a value that indicates whether the SpeedDial is visible or hidden. 
+            </summary> 
+            <value> 
+            <c>true</c>, if the SpeedDial is visible. The default value is <c>true</c>. 
+            </value> 
+            <remarks> 
+            Supports two-way binding. 
+            </remarks> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.VisibleChanged">
+            <exclude/>
+            <summary> 
+            Gets or sets an event callback that is raised when the <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Visible"/> property is changed.  
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.ChildContent">
+            <summary> 
+            Gets or sets a value that indicates the child content for the SpeedDial including HTML element. If the child content is not specified, SpeedDial is rendered using <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Content"/> property. 
+            </summary> 
+            <value> 
+            The template content. The default value is <c>null</c>. 
+            </value> 
+            <remarks> 
+            The child content which is specified within <see cref="T:Syncfusion.Blazor.Buttons.SfSpeedDial"/> tag directive is either a string or HTML Element. The string content is also specified using <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Content"/> property. 
+            </remarks> 
+            <exclude/>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.HtmlAttributes">
+            <summary> 
+            Gets or sets a collection of additional attributes that will applied to the SpeedDial button element. 
+            </summary> 
+            <remarks> 
+            Additional attributes can be added by specifying as inline attributes or by specifying <c>@attributes</c> directive. 
+            </remarks> 
+            <example> 
+            In the below code example, button width has been specified as style attribute in <see cref="T:Syncfusion.Blazor.Buttons.SfSpeedDial"/> tag directive. 
+            <code><![CDATA[ 
+            <SfSpeedDial style="width:200px" Content="Edit" > 
+                <SpeedDialItems>
+                    <SpeedDialItem Text="Cut"></SpeedDialItem
+                    <SpeedDialItem Text="Copy"></SpeedDialItem>
+                    <SpeedDialItem Text="Paste"></SpeedDialItem>
+                </SpeedDialItems>
+            </SfSpeedDial> 
+            ]]></code> 
+            In the below code example, aria-label (accessibility attribute) has been specified as an attribute in <see cref="T:Syncfusion.Blazor.Buttons.SfSpeedDial"/> tag directive. 
+            <code><![CDATA[ 
+            <SfSpeedDial aria-label="Edit" OpenIconCss="EditIcon"> 
+                <SpeedDialItems>
+                    <SpeedDialItem Text="Cut"></SpeedDialItem
+                    <SpeedDialItem Text="Copy"></SpeedDialItem>
+                    <SpeedDialItem Text="Paste"></SpeedDialItem>
+                </SpeedDialItems>
+            </SfSpeedDial> 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Created">
+             <summary> 
+             Gets or sets an event callback that is raised when the <see cref="T:Syncfusion.Blazor.Buttons.SfSpeedDial"/> rendering is completed.  
+             </summary> 
+             <example> 
+             <code><![CDATA[ 
+             <SfSpeedDial Content="Edit" Created="created"> 
+                <ChildContent>
+                 <SpeedDialItems>
+                     <SpeedDialItem Text="Cut"></SpeedDialItem
+                     <SpeedDialItem Text="Copy"></SpeedDialItem>
+                     <SpeedDialItem Text="Paste"></SpeedDialItem>
+                 </SpeedDialItems>
+                </ChildContent>
+            </SfSpeedDial> 
+            @code {
+                 private created (){
+                     Console.WriteLine("SpeedDial Created");
+                 }
+            }
+             ]]></code> 
+             </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.ItemClicked">
+             <summary> 
+             Gets or sets an event callback that is raised when a speed dial action item is clicked.  
+             </summary> 
+             <example> 
+             <code><![CDATA[ 
+             <SfSpeedDial Content="Edit" ItemClicked="itemclicked"> 
+                <ChildContent>
+                 <SpeedDialItems>
+                     <SpeedDialItem Text="Cut"></SpeedDialItem
+                     <SpeedDialItem Text="Copy"></SpeedDialItem>
+                     <SpeedDialItem Text="Paste"></SpeedDialItem>
+                 </SpeedDialItems>
+                </ChildContent>
+            </SfSpeedDial> 
+            @code {
+                 private itemclicked(SpeedDialItemEventArgs args){
+                     Console.WriteLine(args.Item.Text + " is SpeedDial Clicked");
+                 }
+            }
+             ]]></code> 
+             </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.ItemRendered">
+            <summary> 
+            Gets or sets an event callback that is raised when a <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItem"/> is rendered.  
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Closed">
+            <summary> 
+            Gets or sets an event callback that is raised when the SpeedDial popup is closed.  
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Opened">
+            <summary> 
+            Gets or sets an event callback that is raised when the SpeedDial popup is opened.  
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Closing">
+             <summary> 
+             Gets or sets an event callback that is raised before the speed dial popup is closed.  
+             </summary> 
+             <remarks> 
+             <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Closing"/> is a canceable event. To cancel the closing action of SpeedDial Popup, 
+             set the <see cref="P:Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs.Cancel"/> property as <c>true</c>.
+             </remarks> 
+             <example> 
+             SpeedDial with `Closing` event.
+             <code><![CDATA[ 
+             <SfSpeedDial Content="Edit" Closing="closing"> 
+                <ChildContent>
+                 <SpeedDialItems>
+                     <SpeedDialItem Text="Cut"></SpeedDialItem
+                     <SpeedDialItem Text="Copy"></SpeedDialItem>
+                     <SpeedDialItem Text="Paste"></SpeedDialItem>
+                 </SpeedDialItems>
+                </ChildContent>
+            </SfSpeedDial> 
+            @code {
+                 private closing(SpeedDialBeforeOpenCloseEventArgs args){
+                     args.Cancel = false; //Set as true to prevent closing of SpeedDial popup.
+                 }
+            }
+             ]]></code> 
+             </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Opening">
+             <summary> 
+             Gets or sets an event callback that is raised before the speed dial popup is opened.    
+             </summary> 
+             <remarks> 
+             <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Opening"/> is a canceable event. To cancel the opening action of SpeedDial Popup , 
+             set the <see cref="P:Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs.Cancel"/> property as <c>true</c>.
+             </remarks> 
+             <example> 
+             SpeedDial with Opening event.
+             <code><![CDATA[ 
+             <SfSpeedDial Content="Edit" Opening="opening"> 
+                <ChildContent>
+                 <SpeedDialItems>
+                     <SpeedDialItem Text="Cut"></SpeedDialItem
+                     <SpeedDialItem Text="Copy"></SpeedDialItem>
+                     <SpeedDialItem Text="Paste"></SpeedDialItem>
+                 </SpeedDialItems>
+                </ChildContent>
+            </SfSpeedDial> 
+            @code {
+                 private opening(SpeedDialBeforeOpenCloseEventArgs args){
+                     args.Cancel = false; //Set as true to prevent opening of SpeedDial popup.
+                 }
+            }
+             ]]></code> 
+             </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Items">
+            <summary> 
+            Gets or sets the list of related menu items.  
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.RadialSettings">
+            <summary> 
+            Gets or sets the settings for Radial mode.  
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Animation">
+            <summary> 
+            Gets or sets the settings for SpeedDial Animation.  
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.UpdateVisible(System.Boolean)">
+            <summary>
+            Updates the visible property and triggers the changed event for two-way binding.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.SetFabIcon">
+            <summary>
+            Sets the FAB icon based on the current state of SpeedDial.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.UpdateStyleAttribute(System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            Updates the style attribute value in the popup attributes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.UpdateItems(System.Collections.Generic.List{Syncfusion.Blazor.Buttons.SpeedDialItem})">
+            <summary>
+            Updates the Items list with the list provided from the SpeedDialItems tag directive.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.UpdateRadialSettings(Syncfusion.Blazor.Buttons.SpeedDialRadialSettings)">
+            <summary>
+            Updates the RadialSettings with the value provided from the SpeedDialRadialSettings tag directive.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.UpdateAnimationSettings(Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings)">
+            <summary>
+            Updates the Animation with the value provided from the SpeedDialAnimationSettings tag directive.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.GetClientParameters(System.Object,System.String)">
+            <summary>
+            Sents an asynchronus request to the interop to get the required values.
+            </summary> 
+            <returns>A System.Threading.Tasks.Task that yields a Dictionary value </returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.CallClientMethod(System.Object,System.String)">
+            <summary>
+            Sents an asynchronus request to the interop.
+            </summary> 
+            <returns>A System.Threading.Tasks.Task that represents any asynchronus action</returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.TriggerItemClick(Syncfusion.Blazor.Buttons.SpeedDialItem)">
+            <summary>
+            Triggers the ItemClicked event for the provided item.
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.ShowHidePopup(System.Boolean)">
+            <summary>
+            Opens or closes the SpeedDial popup based on the given parameter. 
+            Opens the SpeedDial popup when passed true and Closes the SpeedDial popup when passed false.
+            </summary> 
+            <returns>A System.Threading.Tasks.Task that represents any asynchronus action</returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.OnAnimationCompleted(System.Boolean)">
+            <summary>
+            Method invoked from interop after the animation is completed to continue the C# side execution.
+            Method will be directly invoked from C# if animation is disabled.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.UpdatePosition(System.String,System.String)">
+            <summary>
+            Method invoked from interop when the viewport is resized.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.RefreshPositionAsync">
+            <summary>
+            Refreshes the button position of speed dial. You can call this method to re-position button when <see cref="P:Syncfusion.Blazor.Buttons.SfFab.Target"/> is resized. 
+            </summary>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.ShowAsync">
+            <summary>
+            Opens the SpeedDial popup to display <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/> or <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.PopupTemplate"/>.
+            </summary>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.HideAsync">
+            <summary>
+            Closes the SpeedDial popup.
+            </summary>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.keyActionHandler(Microsoft.AspNetCore.Components.Web.KeyboardEventArgs)">
+            <summary>
+            Handles the key press action on the FAB.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SfSpeedDial.FabClick">
+            <summary>
+            Handles the click event of FAB.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings">
+            <summary> 
+            Provides options to customize the animation applied while opening and closing the popup of <see cref="T:Syncfusion.Blazor.Buttons.SfSpeedDial"/>.
+            </summary> 
+            <example> 
+            A simple SpeedDial with animation settings.
+            <code><![CDATA[ 
+            <SfSpeedDial Content="Edit"> 
+                <SpeedDialItems>
+                    <SpeedDialItem Text="Cut"></SpeedDialItem
+                    <SpeedDialItem Text="Copy"></SpeedDialItem>
+                    <SpeedDialItem Text="Paste"></SpeedDialItem>
+                </SpeedDialItems>
+                <SpeedDialAnimationSettings Effect=SpeedDialAnimationEffect.Zoom/>
+            </SfSpeedDial> 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings.Duration">
+            <summary>
+            Gets or sets the duration in milliseconds that the animation takes to open or close the popup.
+            </summary> 
+            <value> 
+            Accepts an integer value. The default value is <c>400</c>.
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings.Delay">
+            <summary>
+            Gets or sets the value that indicates the delay before starting the animation.  
+            </summary> 
+            <value> 
+            Accepts an integer value. The default value is <c>0</c>.
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings.Effect">
+            <summary>
+            Gets or sets the value that indicates the type of animation effect used for opening and closing of the Speed Dial items.
+            </summary> 
+            <value> 
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect"/> enumeration that specifies the animation effect. The default value is <see cref="F:Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.Fade"/>
+            </value> 
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialItem">
+            <summary>
+            A class that represents action item of <see cref="T:Syncfusion.Blazor.Buttons.SfSpeedDial"/> component.
+            </summary>
+            <remarks>
+            You can render icon only, text only, icon and text speeddial action item by specifying value to corresponding property.
+            </remarks>
+            <example>
+            In the below code example, a basic SpeedDial item has been added using <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItem"/> tag directive.
+            <code><![CDATA[
+            <SfSpeedDial Content="Edit"> 
+                <SpeedDialItems>
+                    <SpeedDialItem Text="Cut" IconCss="e-icons e-cut"></SpeedDialItem
+                    <SpeedDialItem IconCss="e-icons e-copy"></SpeedDialItem>
+                    <SpeedDialItem Text="Paste"></SpeedDialItem>
+                </SpeedDialItems>
+            </SfSpeedDial> 
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItem.Parent">
+            <summary>
+            Specifies the parent for item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItem.IconCss">
+            <summary> 
+            Gets or sets one or more CSS classes to include an icon or image in speed dial item.   
+            </summary> 
+            <value> 
+            Accepts a CSS class string separated by space to include an icon or image for the SpeedDial item. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItem.Disabled">
+            <summary>
+            Gets or sets a value that indicates whether to enable or disable the `SpeedDialItem`. 
+            </summary>
+            <value> 
+            <c>true</c>, if the item is disabled. The default value is <c>false</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItem.Text">
+            <summary> 
+            Gets or sets the text content of `SpeedDialItem`. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+            <remarks>
+            Text won't be displayed when <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Mode"/> is `Radial`.
+            Also, in `Linear` mode text won't be displayed when <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Direction"/> is `Left` or `Right`.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItem.Title">
+            <summary> 
+            Gets or sets the title of `SpeedDialItem` to display tooltip. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItem.ID">
+            <summary> 
+            Gets or sets a unique value for the `SpeedDialItem` which can be used to identify the item in event args. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItem.HtmlAttributes">
+            <summary>
+            Gets or sets a collection of additional attributes that will be applied to the breadcrumb item element.
+            </summary>
+            <remarks>
+            Additional attributes can be added by specifying as inline attributes or by specifying <c>@attributes</c> directive.
+            </remarks>
+            <example>
+            In the below code example, title attribute added as inline in <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItem"/> tag directive.
+            <code><![CDATA[
+            <SfSpeedDial Content="Edit"> 
+                <SpeedDialItems>
+                    <SpeedDialItem Text="Cut" IconCss="e-icons e-cut" style="color:red;"></SpeedDialItem
+                    <SpeedDialItem IconCss="e-icons e-copy"></SpeedDialItem>
+                    <SpeedDialItem Text="Paste"></SpeedDialItem>
+                </SpeedDialItems>
+            </SfSpeedDial> 
+            ]]></code>
+            </example>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialItems">
+            <summary>
+            Represents a collection of <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItem"/>.
+            </summary>
+            <remarks>
+            To generate dynamic <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItem"/> based on collection, use <c>@foreach</c> within <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/> tag directive.
+            </remarks>
+            <example>
+            In the below code example, a basic SpeedDial has been rendered using <see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/> tag directive.
+            <code><![CDATA[
+            <SfSpeedDial Content="Edit"> 
+                <SpeedDialItems>
+                    <SpeedDialItem Text="Cut"></SpeedDialItem
+                    <SpeedDialItem Text="Copy"></SpeedDialItem>
+                    <SpeedDialItem Text="Paste"></SpeedDialItem>
+                </SpeedDialItems>
+            </SfSpeedDial> 
+            ]]></code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialItems.ChildContent">
+            <exclude/>
+            <summary>
+            Gets or sets the child content for the SpeedDialItem (Child) from the SpeedDial(Parent) .
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SpeedDialItems.UpdateChildProperty(Syncfusion.Blazor.Buttons.SpeedDialItem)">
+            <summary>
+            Updates the SpeedDial with list of items from the SpeedDialItem tag directive when they are rendered.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Blazor.Buttons.SpeedDialItems.RemoveChildProperty(Syncfusion.Blazor.Buttons.SpeedDialItem)">
+            <summary>
+            Updates the SpeedDial with list of items from the SpeedDialItem tag directive when they are removed.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SpeedDialRadialSettings">
+            <summary> 
+            Provides the options to customize the speed dial action buttons when `Mode` of <see cref="T:Syncfusion.Blazor.Buttons.SfSpeedDial"/> is <see cref="F:Syncfusion.Blazor.Buttons.SpeedDialMode.Radial"/>.
+            </summary> 
+            <example> 
+            A simple SpeedDial with animation settings.
+            <code><![CDATA[ 
+            <SfSpeedDial Content="Edit" Mode=SpeedDialMode.Radial > 
+                <SpeedDialItems>
+                    <SpeedDialItem IconCss="e-icons e-cut"></SpeedDialItem
+                    <SpeedDialItem IconCss="e-icons e-paste"></SpeedDialItem>
+                    <SpeedDialItem IconCss="e-icons e-copy"></SpeedDialItem>
+                </SpeedDialItems>
+               <SpeedDialRadialSettings OffSet = "150px" ></ SpeedDialRadialSettings >
+            </SfSpeedDial> 
+            ]]></code> 
+            </example> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.EndAngle">
+            <summary> 
+            Gets or sets the value that indicates the end angle of speed dial items placement.
+            </summary> 
+            <value> 
+            Accepts the values between 0 and 360. The default value is <c>-1</c>>.
+            </value> 
+            <remarks>
+            When a value outside the accepted value range, then the provided value is ignored, and the angle is calculated based on <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Position"/>.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.StartAngle">
+            <summary> 
+            Gets or sets the value that indicates the start angle of speeddial items placement.
+            </summary> 
+            <value> 
+            Accepts the values between 0 and 360. The default value is <c>-1</c>>.
+            </value> 
+            <remarks>
+            When a value outside the accepted value range, then the provided value is ignored, and the angle is calculated based on <see cref="P:Syncfusion.Blazor.Buttons.SfSpeedDial.Position"/>.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.OffSet">
+            <summary> 
+            Gets or sets the offset distance of speed dial items placement from the button of Speed Dial. 
+            </summary> 
+            <value> 
+            Accepts the string values. The default value is <c>100px</c>>.
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.Direction">
+            <summary>
+            Gets or sets the speed dial action items (<see cref="T:Syncfusion.Blazor.Buttons.SpeedDialItems"/>) placement order.
+            </summary> 
+            <value> 
+            One of the <see cref="T:Syncfusion.Blazor.Buttons.RadialDirection"/> enumeration that specifies the direction. The default value is <see cref="F:Syncfusion.Blazor.Buttons.RadialDirection.Auto"/>
+            </value> 
+        </member>
+        <member name="T:Syncfusion.Blazor.Buttons.SfSwitch`1">
+            <summary> 
+            Switch is a graphical user interface element that allows you to toggle between checked and unchecked state. 
+            It has checked and unchecked states. 
+            </summary> 
+            <example> 
+            In the below code example, a basic switch is initialized with <c>Checked</c> property. 
+            <code><![CDATA[ 
+            <SfSwitch Checked="true"> 
+            </SfSwitch> 
+            ]]></code> 
+            </example>
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSwitch`1.OnLabel">
+            <summary> 
+            Gets or sets a value that indicates the label for ON state of Switch component. 
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSwitch`1.OffLabel">
+            <summary> 
+            Gets or sets a value that indicates the label for ON state of Switch component.
+            </summary> 
+            <value> 
+            Accepts a string value. The default value is <c>String.Empty</c>. 
+            </value> 
+        </member>
+        <member name="P:Syncfusion.Blazor.Buttons.SfSwitch`1.ValueChange">
+            <summary> 
+            Gets or sets an event callback that is raised when the switch state is changed.  
+            </summary> 
+            <remarks> 
+            The event is raised for UI based click only. 
+            </remarks> 
+            <example> 
+            <code><![CDATA[ 
+            <SfSwitch ValueChange="@Changed"> 
+            </SfSwitch> 
+            @code { 
+                private void Changed(ChangeEventArgs<TChecked> args) { 
+                    // Write your code here. 
+                } 
+            } 
+            ]]></code> 
+            </example> 
+        </member>
+    </members>
+</doc>
