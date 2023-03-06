@@ -15,30 +15,51 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public static CustomerControl[] list; //list variable 
-        private Point lastLocation;
 
-
-
-
+        protected override CreateParams CreateParams //this code make our form draggable without any glitch, perfect resize.
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
+            }
+        }
         public Form1()
         {
             InitializeComponent();
-           
+            panel1.BackColor = Color.MediumTurquoise;
+            
+
         }
+
         //initiliaze variables
         public List<string> name = new List<string>(); 
         public List<string> address = new List<string>();
-        
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragPanelPoint;
+        private Point dragFormPoint;
+        public static CustomerControl[] list; //list variable 
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadData();
             flowLayoutPanel1.AutoScroll = true; //scroll feature
             flowLayoutPanel1.VerticalScroll.Visible = true; //make visible the scroll
+            this.DoubleBuffered = true;
+            this.ResizeRedraw = true;
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
+            this.button1.Image = Image.FromFile("C:\\Users\\berki\\source\\repos\\WindowsFormsApp1\\bin.png").GetThumbnailImage(25, 25, null, IntPtr.Zero);
+
+
             
-            
-            
+            // Buton arkaplanının tamamen şeffaf olmasını sağlar
+            button1.BackColor = Color.Transparent;
+
         }
 
         private void LoadData() //Database Connection and get data from SQL Server to display on flow layout panel.
@@ -75,6 +96,7 @@ namespace WindowsFormsApp1
                 connection.Close();
             }
         }
+        
 
         private void button1_Click(object sender, EventArgs e) //Delete button - when you select data and click button it removes data from panel.
         {
@@ -95,8 +117,7 @@ namespace WindowsFormsApp1
                 if (CustomerControl.SelectedItems.Count == 1)  {
                     MessageBox.Show(c.Name);
                 }
-                
-                
+              
             }
         }
        public void disableButton()
@@ -108,38 +129,15 @@ namespace WindowsFormsApp1
             button2.Enabled = true;
         }
 
+        
 
-
-        private void Form1_MouseDown(object sender, MouseEventArgs e) //fare tıklamasıyla formun bulunduğu son konumu kaydeder.
-        {
-            if (e.Button == MouseButtons.Left && e.Y <= panel1.Height)
-            {
-                lastLocation = e.Location;
-            }
-        }
-
-        private void Form1_MouseMove(object sender, MouseEventArgs e) //sol fare düğmesi basılıyken formu sürüklemenizi sağlar
-        {
-            if (e.Button == MouseButtons.Left && e.Y <= panel1.Height)
-            {
-                this.Left += e.X - lastLocation.X;
-                this.Top += e.Y - lastLocation.Y;
-            }
-        }
-
-        private void Form1_MouseUp(object sender, MouseEventArgs e) //fare düğmesinin serbest bırakılmasıyla son konum kaydının sıfırlanmasını sağlar.
-        {
-            lastLocation = Point.Empty;
-
-        }
-
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void button1_MouseEnter(object sender, EventArgs e) //delete button
         {
             button1.BackColor = Color.Red;
 
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
+        private void button1_MouseLeave(object sender, EventArgs e) //Show Name button
         {
             button1.BackColor = DefaultBackColor;
 
@@ -154,6 +152,48 @@ namespace WindowsFormsApp1
         {
             button2.BackColor = DefaultBackColor;
         }
+
+        
+        private void panel1_MouseDown(object sender, MouseEventArgs e) // Panelin MouseDown olayı
+        {
+            
+            if (e.Button == MouseButtons.Left) // Sadece sol tıklamaları dinle
+            {
+                // Sürükleme işlemi başlatıldığında, sürükleyen fare imlecinin konumunu, panelin orijinal konumunu ve formun orijinal konumunu kaydet
+                dragging = true;
+                dragCursorPoint = Cursor.Position;
+                dragPanelPoint = panel1.Location;
+                dragFormPoint = this.Location;
+            }
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                // Sürükleme işlemi sırasında, farenin konumu ve panelin orijinal konumu arasındaki farkı alarak,
+                // panelin konumunu ve formun konumunu güncelle
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                panel1.Location = Point.Add(dragPanelPoint, new Size(dif));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                dragging = false; // Sürükleme işlemi bittiğinde, sürükleme durumunu false yaparak işlemi sonlandır
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close(); //programı kapatır
+        }
+
+       
     }
 
 
