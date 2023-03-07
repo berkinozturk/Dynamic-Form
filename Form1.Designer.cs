@@ -108,7 +108,6 @@
             this.siticoneGradientButton1.TabIndex = 11;
             this.siticoneGradientButton1.Text = "Delete";
             this.siticoneGradientButton1.Click += new System.EventHandler(this.button1_Click);
-            this.siticoneGradientButton1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // siticoneGradientButton2
             // 

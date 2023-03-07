@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             if (SelectedItems.Contains(this))
             {
                 SelectedItems.Remove(this);
-                this.BackColor = SystemColors.Control;
+                this.BackColor = Color.White;
             }
             else
             {

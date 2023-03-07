@@ -121,28 +121,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e) //delete button
-        {
-            //siticoneButton1.BackColor = Color.Red;
-           
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs e) //Show Name button
-        {
-            //siticoneButton1.BackColor = DefaultBackColor;
-        }
-
-        private void button2_MouseEnter(object sender, EventArgs e)
-        {
-            //siticoneGradientButton2.BackColor = Color.Yellow;
-        }
-
-        private void button2_MouseLeave(object sender, EventArgs e)
-        {
-            //button2.BackColor = DefaultBackColor;
-        }
-
-        
         private void panel1_MouseDown(object sender, MouseEventArgs e) // Panel MouseDown 
         {
             
