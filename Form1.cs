@@ -32,8 +32,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
             panel1.BackColor = Color.MediumTurquoise;
 
-            
-
         }
 
         //initiliaze variables
@@ -55,14 +53,6 @@ namespace WindowsFormsApp1
             this.ResizeRedraw = true;
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             
-
-            // this.button1.Image = Image.FromFile("C:\\Users\\berki\\source\\repos\\WindowsFormsApp1\\bin.png").GetThumbnailImage(25, 25, null, IntPtr.Zero);
-
-            
-                
-
-            
-
         }
 
         private void LoadData() //Database Connection and get data from SQL Server to display on flow layout panel.
@@ -110,9 +100,7 @@ namespace WindowsFormsApp1
             CustomerControl.SelectedItems.Clear();
         }
 
-        
-
-        public void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e) //Show name button - display the selected data name
         {
             
             foreach (CustomerControl c in CustomerControl.SelectedItems)
@@ -123,50 +111,45 @@ namespace WindowsFormsApp1
               
             }
         }
-       public void disableButton()
+       public void disableButton() //make button disabled
         {
-            //button2.Enabled = false;
             siticoneGradientButton2.Enabled = false;
         }
-        public void enableButton()
+        public void enableButton() //make button enabled
         {
-           // button2.Enabled = true;
             siticoneGradientButton2.Enabled = true;
 
         }
 
-
-
         private void button1_MouseEnter(object sender, EventArgs e) //delete button
         {
             //siticoneButton1.BackColor = Color.Red;
-            
-
+           
         }
 
         private void button1_MouseLeave(object sender, EventArgs e) //Show Name button
         {
             //siticoneButton1.BackColor = DefaultBackColor;
-
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            siticoneGradientButton2.BackColor = Color.Yellow;
+            //siticoneGradientButton2.BackColor = Color.Yellow;
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {
-            button2.BackColor = DefaultBackColor;
+            //button2.BackColor = DefaultBackColor;
         }
 
         
-        private void panel1_MouseDown(object sender, MouseEventArgs e) // Panelin MouseDown olayı
+        private void panel1_MouseDown(object sender, MouseEventArgs e) // Panel MouseDown 
         {
             
-            if (e.Button == MouseButtons.Left) // Sadece sol tıklamaları dinle
+            if (e.Button == MouseButtons.Left) // Only left-clicks of mouse
             {
-                // Sürükleme işlemi başlatıldığında, sürükleyen fare imlecinin konumunu, panelin orijinal konumunu ve formun orijinal konumunu kaydet
+                // Save the position of the dragging mouse cursor, the original position of the panel,
+                // and the original position of the form when the drag operation is initiated
                 dragging = true;
                 dragCursorPoint = Cursor.Position;
                 dragPanelPoint = panel1.Location;
@@ -178,8 +161,8 @@ namespace WindowsFormsApp1
         {
             if (dragging)
             {
-                // Sürükleme işlemi sırasında, farenin konumu ve panelin orijinal konumu arasındaki farkı alarak,
-                // panelin konumunu ve formun konumunu güncelle
+                // During the drag operation, update the position of the panel and the position of the form,
+                // taking the difference between the mouse position and the original position of the panel
                 Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
                 panel1.Location = Point.Add(dragPanelPoint, new Size(dif));
                 this.Location = Point.Add(dragFormPoint, new Size(dif));
@@ -190,16 +173,14 @@ namespace WindowsFormsApp1
         {
             if (e.Button == MouseButtons.Left)
             {
-                dragging = false; // Sürükleme işlemi bittiğinde, sürükleme durumunu false yaparak işlemi sonlandır
-
+                dragging = false; // When the drag is finished, set the drag state to false to end the process
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close(); //programı kapatır
+            this.Close(); // terminate the program
         }
-
 
     }
 

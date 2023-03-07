@@ -18,7 +18,6 @@ namespace WindowsFormsApp1
         Form1 form2 = new Form1(); //form2 object from Form1 class
 
 
-
         public CustomerControl(Form f1)
         {
             InitializeComponent(); 
