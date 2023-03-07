@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
         {
             /* if ((Control.ModifierKeys & Keys.Control) != Keys.Control)
             {
-                // Ctrl tuşu basılı değilse, önceki seçimleri kaldırın
+                // If Ctrl key is not pressed, remove previous selections
                 foreach (CustomerControl c in SelectedItems)
                 {
                     c.BackColor = SystemColors.Control;
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
             } */
 
 
-            // Öğe seçiliyse listeden kaldır.
+            // If the item is selected, remove it from the list.
             if (SelectedItems.Contains(this))
             {
                 SelectedItems.Remove(this);
@@ -61,8 +61,8 @@ namespace WindowsFormsApp1
             }
             else
             {
-                SelectedItems.Add(this); //Öğe seçili değilse listeye ekle
-                this.BackColor = Color.Aqua; //Öğenin arkaplanın rengini boya
+                SelectedItems.Add(this); //Add to list if item is not selected
+                this.BackColor = Color.Aqua; //Paint the item's background color
             }
 
             // Get form2 instance
