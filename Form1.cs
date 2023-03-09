@@ -10,16 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-
-
+using Newtonsoft.Json;
 
 namespace WindowsFormsApp1
 {
+
     public partial class Form1 : Form
     {
 
         protected override CreateParams CreateParams //this code make our form draggable without any glitch, perfect resize.
         {
+
             get
             {
                 CreateParams cp = base.CreateParams;
@@ -31,6 +32,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             panel1.BackColor = Color.MediumTurquoise;
+            // JsonConvert.DefaultSettings = () => new JsonSerializerSettings { MaxDepth = 128 }; // For Improper Handling of Exceptional Conditions in Newtonsoft.Json #3
 
         }
 
